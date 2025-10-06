@@ -71,9 +71,6 @@ const TierraDeVinos = () => {
       {/* Header Section */}
       <div className="tierra-de-vinos-header">
         <h1 className="tierra-de-vinos-title">Tierra de Vinos</h1>
-        <p className="tierra-de-vinos-subtitle">
-          Descubre las mejores bodegas y viñedos de Pabellón de Arteaga
-        </p>
       </div>
 
 
@@ -91,10 +88,6 @@ const TierraDeVinos = () => {
                 src={item.image} 
                 alt={item.title}
                 className="tierra-de-vinos-card-image"
-                onError={(e) => {
-                  console.log('Error loading image:', item.image);
-                  e.target.src = '/assents/imagenes/placeholder.png';
-                }}
               />
               <div className="tierra-de-vinos-card-content">
                 <h4 className="tierra-de-vinos-card-title">{item.title}</h4>

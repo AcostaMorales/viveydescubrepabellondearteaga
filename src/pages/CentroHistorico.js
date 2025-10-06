@@ -71,9 +71,6 @@ const CentroHistorico = () => {
       {/* Header Section */}
       <div className="centro-historico-header">
         <h1 className="centro-historico-title">Centro Histórico</h1>
-        <p className="centro-historico-subtitle">
-          Descubre la rica historia y arquitectura colonial de Pabellón de Arteaga
-        </p>
       </div>
 
 
@@ -87,7 +84,6 @@ const CentroHistorico = () => {
               className="centro-historico-card"
               onClick={() => handleNavigation(item.path)}
             >
-              {index < 3 && <div className="centro-historico-badge"></div>}
               <img 
                 src={item.image} 
                 alt={item.title}

@@ -21,8 +21,14 @@
 }
 
 .centro-historico-subtitle {
+  padding-top: 15px;
+  height: 100px;
+  background-color: white;
+  border-color: black;
+  border: 1px solid;
+  border-radius: 10px;
   font-size: 1.2rem;
-  color: var(--gray-medium);
+  color: var(--black-dark  );
   font-weight: 400;
   max-width: 600px;
   margin: 0 auto;
@@ -35,7 +41,7 @@
 }
 
 .centro-historico-section-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: var(--spacing-xl);
@@ -79,22 +85,6 @@
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--accent-color);
-}
-
-.centro-historico-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-
-.centro-historico-card:hover::before {
-  opacity: 1;
 }
 
 .centro-historico-card-image {

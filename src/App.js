@@ -30,6 +30,11 @@ function App() {
           height: "100%"
         }}
         >
+          <div style={{
+          position: "absolute",
+          insert: 0,
+          backgroundColor: "rgba(0,0,0,0.6)"
+          }}/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/quever" element={<QueVer />} />

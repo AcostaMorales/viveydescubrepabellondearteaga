@@ -20,14 +20,6 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.tierra-de-vinos-subtitle {
-  font-size: 1.2rem;
-  color: var(--black);
-  font-weight: 400;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
 
 /* Navigation Section */
 .tierra-de-vinos-navigation {
@@ -145,24 +137,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Elementos decorativos temáticos */
-.tierra-de-vinos-decoration {
-  position: relative;
-}
-
-.tierra-de-vinos-decoration::after {
-  content: '🍇';
-  position: absolute;
-  top: var(--spacing-sm);
-  left: var(--spacing-sm);
-  font-size: 1.2rem;
-  opacity: 0.6;
-  transition: opacity var(--transition);
-}
-
-.tierra-de-vinos-decoration:hover::after {
-  opacity: 0.9;
-}
 
 /* Información adicional */
 .tierra-de-vinos-info {
