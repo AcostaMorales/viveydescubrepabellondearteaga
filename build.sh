@@ -2,5 +2,11 @@
 # exit on error
 set -o errexit
 
-npm install
+echo "Installing dependencies..."
+npm ci
+
+echo "Building the app..."
 npm run build
+
+echo "Build completed successfully!"
+ls -la build/

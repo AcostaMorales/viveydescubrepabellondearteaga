@@ -2,13 +2,9 @@ services:
   - type: web
     name: vive-descubre-pabellon
     env: static
-    buildCommand: npm install && npm run build
+    buildCommand: npm ci && npm run build
     staticPublishPath: ./build
-    headers:
-      - path: /*
-        headers:
-          X-Frame-Options: DENY
-          X-Content-Type-Options: nosniff
+    pullRequestPreviewsEnabled: false
     routes:
       - type: rewrite
         source: /*
