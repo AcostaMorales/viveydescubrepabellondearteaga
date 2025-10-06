@@ -1,0 +1,257 @@
+/* Página Centro Histórico */
+.centro-historico-page {
+  padding: var(--spacing-lg);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  position: relative;
+}
+
+/* Header Section */
+.centro-historico-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+}
+
+.centro-historico-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.centro-historico-subtitle {
+  font-size: 1.2rem;
+  color: var(--gray-medium);
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Navigation Section */
+.centro-historico-navigation {
+  margin-top: var(--spacing-xl);
+}
+
+.centro-historico-section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  position: relative;
+}
+
+.centro-historico-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+/* Grid personalizado para Centro Histórico */
+.centro-historico-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+}
+
+/* Tarjetas especiales para Centro Histórico */
+.centro-historico-card {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all var(--transition);
+  cursor: pointer;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.centro-historico-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-color);
+}
+
+.centro-historico-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.centro-historico-card:hover::before {
+  opacity: 1;
+}
+
+.centro-historico-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  transition: transform var(--transition);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius);
+}
+
+.centro-historico-card:hover .centro-historico-card-image {
+  transform: scale(1.05);
+}
+
+.centro-historico-card-content {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.centro-historico-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+  text-transform: capitalize;
+}
+
+.centro-historico-card-description {
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+  line-height: 1.4;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Badge para destacar lugares especiales */
+.centro-historico-badge {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background: var(--primary-color);
+  color: var(--white);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Información adicional */
+.centro-historico-info {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--primary-color);
+}
+
+.centro-historico-info-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.centro-historico-info-text {
+  color: var(--gray-dark);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .centro-historico-page {
+    padding: var(--spacing-md);
+    background-attachment: scroll;
+  }
+  
+  .centro-historico-title {
+    font-size: 2rem;
+  }
+  
+  .centro-historico-subtitle {
+    font-size: 1rem;
+  }
+  
+  .centro-historico-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+  }
+  
+  .centro-historico-card-image {
+    height: 160px;
+    padding: var(--spacing-xs);
+  }
+  
+  .centro-historico-section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .centro-historico-title {
+    font-size: 1.6rem;
+  }
+  
+  .centro-historico-card-content {
+    padding: var(--spacing-md);
+  }
+  
+  .centro-historico-card-image {
+    height: 140px;
+    padding: var(--spacing-xs);
+  }
+  
+  .centro-historico-info {
+    padding: var(--spacing-lg);
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.centro-historico-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.centro-historico-card:nth-child(1) { animation-delay: 0.1s; }
+.centro-historico-card:nth-child(2) { animation-delay: 0.2s; }
+.centro-historico-card:nth-child(3) { animation-delay: 0.3s; }
+.centro-historico-card:nth-child(4) { animation-delay: 0.4s; }
+.centro-historico-card:nth-child(5) { animation-delay: 0.5s; }
+.centro-historico-card:nth-child(6) { animation-delay: 0.6s; }
+.centro-historico-card:nth-child(7) { animation-delay: 0.7s; }
+.centro-historico-card:nth-child(8) { animation-delay: 0.8s; }
+.centro-historico-card:nth-child(9) { animation-delay: 0.9s; }
+
+/* Efectos especiales */
+.centro-historico-highlight {
+  background: linear-gradient(120deg, transparent 0%, var(--accent-color) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

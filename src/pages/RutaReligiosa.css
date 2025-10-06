@@ -1,0 +1,231 @@
+/* Página Ruta Religiosa */
+.ruta-religiosa-page {
+  padding: var(--spacing-lg);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  position: relative;
+}
+
+/* Título principal */
+.ruta-religiosa-page h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: #4a4a4a;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: var(--text-shadow);
+  position: relative;
+}
+
+.ruta-religiosa-page h1::after {
+  content: '✝';
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #8b4513;
+  font-size: 1.8rem;
+  opacity: 0.7;
+}
+
+/* Descripción */
+.ruta-religiosa-page .descripcion {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+  color: #5a5a5a;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  border-left: 4px solid #8b4513;
+}
+
+/* Grid de atracciones */
+.atracciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Tarjetas de atracción */
+.atraccion-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 248, 248, 0.9));
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-medium);
+  transition: var(--transition);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.atraccion-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8b4513, #cd853f, #daa520);
+}
+
+.atraccion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-strong);
+  border-color: #8b4513;
+}
+
+.atraccion-card h3 {
+  color: #8b4513;
+  margin-bottom: var(--spacing-md);
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.atraccion-card h3::before {
+  content: '⛪';
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.atraccion-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.atraccion-card .detalles {
+  background: rgba(139, 69, 19, 0.1);
+  padding: var(--spacing-md);
+  border-radius: calc(var(--border-radius) / 2);
+  margin-top: var(--spacing-md);
+  border-left: 3px solid #8b4513;
+}
+
+.atraccion-card .detalles strong {
+  color: #8b4513;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Sección de información adicional */
+.info-adicional {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 220, 0.9));
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius);
+  margin-top: var(--spacing-xl);
+  box-shadow: var(--shadow-medium);
+  border: 2px solid #daa520;
+  position: relative;
+}
+
+.info-adicional::before {
+  content: '🕊️';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #daa520;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  box-shadow: var(--shadow-medium);
+}
+
+.info-adicional h2 {
+  text-align: center;
+  color: #8b4513;
+  margin-bottom: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+  font-size: 1.8rem;
+}
+
+.info-adicional ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-adicional li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.2);
+  color: #5a5a5a;
+  position: relative;
+  padding-left: var(--spacing-lg);
+}
+
+.info-adicional li::before {
+  content: '✨';
+  position: absolute;
+  left: 0;
+  color: #daa520;
+}
+
+.info-adicional li:last-child {
+  border-bottom: none;
+}
+
+/* Animaciones especiales */
+@keyframes holyGlow {
+  0%, 100% { box-shadow: var(--shadow-medium); }
+  50% { box-shadow: 0 8px 25px rgba(139, 69, 19, 0.3); }
+}
+
+.atraccion-card:hover {
+  animation: holyGlow 2s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ruta-religiosa-page {
+    padding: var(--spacing-md);
+  }
+  
+  .ruta-religiosa-page h1 {
+    font-size: 2rem;
+  }
+  
+  .ruta-religiosa-page h1::after {
+    right: -30px;
+    font-size: 1.5rem;
+  }
+  
+  .atracciones-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .info-adicional {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .ruta-religiosa-page h1 {
+    font-size: 1.8rem;
+  }
+  
+  .ruta-religiosa-page h1::after {
+    display: none;
+  }
+  
+  .atraccion-card {
+    padding: var(--spacing-md);
+  }
+  
+  .info-adicional {
+    padding: var(--spacing-md);
+  }
+  
+  .info-adicional::before {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+}

@@ -1,0 +1,32 @@
+/* Página Que Ver */
+.quever-page {
+  padding: var(--spacing-lg);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  position: relative;
+}
+
+/* Navigation Section */
+.navigation-section {
+  margin-top: 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}

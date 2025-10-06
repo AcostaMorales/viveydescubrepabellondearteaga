@@ -1,0 +1,114 @@
+/* Tarjeta de navegación */
+.navigation-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-bottom: var(--spacing-md);
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.navigation-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-color);
+}
+
+.navigation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.navigation-card:hover::before {
+  opacity: 1;
+}
+
+.navigation-card:active {
+  transform: translateY(-2px);
+}
+
+/* Contenedor de imagen */
+.card-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  padding: var(--spacing-sm);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform var(--transition);
+  border-radius: var(--border-radius);
+}
+
+.navigation-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+/* Grid de tarjetas */
+.navigation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navigation-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+  }
+  
+  .card-image-container {
+    height: 160px;
+    padding: var(--spacing-xs);
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .card-content {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-image-container {
+    height: 140px;
+  }
+  
+  .card-content {
+    padding: var(--spacing-sm);
+  }
+}
