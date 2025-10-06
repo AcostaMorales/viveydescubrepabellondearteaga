@@ -24,7 +24,7 @@ function App() {
           backgroundImage: "url('/assents/imagenes/FondoPagina/FondoPagina.png')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: "contain",
+          backgroundSize: "100% auto",
           width: "100%",
           height: "100%"
         }}
