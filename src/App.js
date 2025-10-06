@@ -26,7 +26,7 @@ function App() {
           backgroundPosition: "center",
           backgroundSize: "contain",
           width: "100%",
-          height: "100vh"
+          height: "100%"
         }}
         >
           <Routes>
