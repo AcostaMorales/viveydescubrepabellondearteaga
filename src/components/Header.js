@@ -39,7 +39,7 @@ const Header = () => {
           <div className="logo-container">
             <Link to="/" onClick={closeMenu}>
               <img 
-                src="/assents/imagenes/Logo/Logo.jpg"
+                src="/assents/imagenes/Logo/Logo.png"
                 alt="Pabellón de Arteaga" 
                 className="logo"
               />

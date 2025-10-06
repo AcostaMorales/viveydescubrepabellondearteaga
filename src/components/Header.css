@@ -91,8 +91,9 @@
 /* Estilos del logo */
 
 .logo {
-  height: 40px;
-  width: auto;
+  height: 45px;
+  width: 45px;
+  object-fit: contain;
 }
 
 .logo-text {
