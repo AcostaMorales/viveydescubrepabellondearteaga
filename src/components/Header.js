@@ -39,17 +39,10 @@ const Header = () => {
           <div className="logo-container">
             <Link to="/" onClick={closeMenu}>
               <img 
-                src={`${process.env.PUBLIC_URL}/assents/imagenes/logo.png`}
+                src="/assents/imagenes/Logo/Logo.jpg"
                 alt="Pabellón de Arteaga" 
                 className="logo"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'block';
-                }}
               />
-              <span className="logo-text" style={{display: 'none'}}>
-                PA
-              </span>
             </Link>
           </div>
         </div>
@@ -76,12 +69,10 @@ const Header = () => {
             </div>
             <ul className="menu-list">
               <li><Link to="/" onClick={closeMenu}>Inicio</Link></li>
-              <li><Link to="/quever" onClick={closeMenu}>¿Qué ver?</Link></li>
-              <li><Link to="/quever/centrohistorico" onClick={closeMenu}>Centro Histórico</Link></li>
-              <li><Link to="/quever/tierradevinos" onClick={closeMenu}>Tierra de Vinos</Link></li>
-              <li><Link to="/quever/rutadelagarnacha" onClick={closeMenu}>Ruta de la Garnacha</Link></li>
-              <li><Link to="/quever/haciendas" onClick={closeMenu}>Haciendas</Link></li>
-              <li><Link to="/quever/rutareligiosa" onClick={closeMenu}>Ruta Religiosa</Link></li>
+              <li><Link to="/distritocomercial/hoteles" onClick={closeMenu}>Hoteles</Link></li>
+              <li><Link to="/distritocomercial/restaurantes" onClick={closeMenu}>Restaurantes</Link></li>
+              <li><Link to="/distritocomercial/vinicolas" onClick={closeMenu}>Vinicolas</Link></li>
+              <li><Link to="/distritocomercial/haciendas" onClick={closeMenu}>Haciendas</Link></li>
             </ul>
           </nav>
         </div>

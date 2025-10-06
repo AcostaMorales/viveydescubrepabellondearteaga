@@ -110,7 +110,6 @@
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: var(--spacing-sm);
-  text-transform: capitalize;
 }
 
 .centro-historico-card-description {

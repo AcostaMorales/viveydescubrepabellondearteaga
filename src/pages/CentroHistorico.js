@@ -8,13 +8,13 @@ const CentroHistorico = () => {
   const navigationItems = [
     {
       id: 1,
-      title: "Antigua estacion",
+      title: "Antigua estación",
       image: "/assents/imagenes/CentroHistorico/AntiguaEstacion.png",
       path: "/quever/centrohistorico/antiguaestacion"
     }, 
     {
       id: 2,
-      title: "Archivo historico",
+      title: "Archivo histórico",
       image: "/assents/imagenes/CentroHistorico/ArchivoHistorico.png",
       path: "/quever/centrohistorico/archivohistorico"
     },

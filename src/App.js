@@ -33,7 +33,7 @@ function App() {
           <div style={{
           position: "absolute",
           insert: 0,
-          backgroundColor: "rgba(0,0,0,0.6)"
+          backgroundColor: "rgba(0,0,0,0.4)"
           }}/>
           <Routes>
             <Route path="/" element={<Home />} />
