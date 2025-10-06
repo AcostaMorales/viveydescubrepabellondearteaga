@@ -1,0 +1,24 @@
+/* CSS para la página de ejemplo */
+.example-page {
+  position: relative;
+  min-height: 100vh;
+}
+
+.example-content {
+  margin-top: 25vh; /* Dejar espacio para el ImageHeader fijo */
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.95);
+  min-height: calc(100vh - 25vh);
+}
+
+.example-content h1 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.example-content p {
+  color: var(--gray-dark);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
