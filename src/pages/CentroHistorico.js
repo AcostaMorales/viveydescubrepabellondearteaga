@@ -21,19 +21,19 @@ const CentroHistorico = () => {
     {
       id: 3,
       title: "Casa de madera",
-      image: "/assents/imagenes/CentroHistorico/CasadeMadera.png",
+      image: "/assents/imagenes/CentroHistorico/CasaDeMadera.png",
       path: "/quever/centrohistorico/casademadera"
     },
     {
       id: 4,
       title: "Monumento a la vendimia",
-      image: "/assents/imagenes/CentroHistorico/MonumentoalaVendimia.png",
+      image: "/assents/imagenes/CentroHistorico/MonumentoALaVendimia.png",
       path: "/quever/centrohistorico/monumentoalavendimia"
     },
     {
         id: 5,
         title: "Mural de presidencia",
-        image: "/assents/imagenes/CentroHistorico/MuraldePresidencia.png",
+        image: "/assents/imagenes/CentroHistorico/MuralDePresidencia.png",
         path: "/quever/centrohistorico/muraldepresidencia"
     },
     {
