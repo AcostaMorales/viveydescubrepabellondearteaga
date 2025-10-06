@@ -5,9 +5,10 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import QueVer from './pages/QueVer';
 import CentroHistorico from './pages/CentroHistorico';
+import AntiguaEstacion from './pages/AntiguaEstacion';
 import TierraDeVinos from "./pages/TierraDeVinos";
 import RutaReligiosa from "./pages/RutaReligiosa";
-import AntiguaEstacion from './pages/ExamplePage'
+
 import './styles/globals.css';
 
 
@@ -22,7 +23,7 @@ function App() {
         
         <main className="main-content"
          style= {{
-          backgroundImage: "url('/assents/imagenes/FondoPagina/FondoPagina.png')",
+          backgroundImage: "url('/assents/imagenes/FondoPagina/FondoPaginaAc.png')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "100% auto",
