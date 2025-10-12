@@ -2,8 +2,10 @@
 .footer {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100vw; /* Ancho completo de la ventana */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
   height: var(--footer-height);
   background-color: var(--white);
   border-top: 1px solid var(--gray-light);
@@ -29,7 +31,7 @@
   transition: all var(--transition);
   flex: 1; /* Cada botón toma espacio igual */
   min-width: 0; /* Permite que se comprima */
-  max-width: none; /* Permite expansión */
+  max-width: 80px; /* Tamaño máximo original */
   min-height: 60px;
 }
 
@@ -41,11 +43,10 @@
 .footer-buttons-container {
   background-color: white;
   display: flex;
-  justify-content: space-evenly; /* Distribuye uniformemente */
+  justify-content: space-around; /* Distribución original */
   align-items: center;
   width: 100%; /* Ocupa todo el ancho disponible */
-  padding: 0 var(--spacing-xs); /* Padding mínimo */
-  gap: 2px; /* Espacio mínimo entre botones */
+  padding: 0 var(--spacing-md); /* Padding original */
 }
 
 .footer-icon {
@@ -63,7 +64,7 @@
   width: clamp(20px, 4vw, 35px); /* Tamaño dinámico: mín 20px, máx 35px, 4% del viewport */
   height: clamp(20px, 4vw, 35px);
   margin-bottom: 0.2rem;
-  object-fit: contain;
+  object-fit: contain; /* Cambiado a contain para mejor calidad */
 }
 
 .footer-text {
