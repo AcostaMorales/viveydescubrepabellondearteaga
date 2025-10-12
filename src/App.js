@@ -23,8 +23,8 @@ function App() {
         
         <main className="main-content"
          style= {{
-          backgroundImage: "url('/assents/imagenes/FondoPagina/FondoPaginaAc.png')",
-          backgroundRepeat: "no-repeat",
+          backgroundImage: "url('/assents/imagenes/FondoPagina/FondoPagina.png')",
+          backgroundRepeat: "repeat",
           backgroundPosition: "center",
           backgroundSize: "100% auto",
           width: "100%",

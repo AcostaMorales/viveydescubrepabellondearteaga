@@ -47,8 +47,19 @@ const Home = () => {
         {/* Video placeholder - aquí irá tu video */}
         <div className="video-container">
           <div className="video-placeholder">
-            <p>Video de Pabellón de Arteaga</p>
-            <small>(Video próximamente)</small>
+            <video 
+              src="/assents/videos/Video_Pabellon.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                height: "auto",
+                objectFit: "cover"
+
+              }}
+            />
           </div>
         </div>
       </div>
