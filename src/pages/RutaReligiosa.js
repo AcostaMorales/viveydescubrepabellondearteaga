@@ -42,7 +42,7 @@ const RutaReligiosa = () => {
       <h1>Ruta Religiosa</h1>
       
       {/* Navigation Section */}
-      <div className="atracciones-grid">
+      <div className="navigation-grid">
           {navigationItems.map(item => (
             <NavigationCard
               key={item.id}
@@ -51,10 +51,8 @@ const RutaReligiosa = () => {
               onClick={() => handleNavigation(item.path)}
             />
           ))}
-        </div>
-        
-        
       </div>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import NavigationCard from '../components/NavigationCard';
 import './CentroHistorico.css';
 
 const CentroHistorico = () => {
@@ -77,23 +78,14 @@ const CentroHistorico = () => {
       {/* Navigation Section */}
       <div className="centro-historico-navigation">
         <h3 className="centro-historico-section-title">Lugares para Visitar</h3>
-        <div className="centro-historico-grid">
-          {navigationItems.map((item, index) => (
-            <div 
-              key={item.id} 
-              className="centro-historico-card"
+        <div className="navigation-grid">
+          {navigationItems.map(item => (
+            <NavigationCard
+              key={item.id}
+              image={item.image}
+              title={item.title}
               onClick={() => handleNavigation(item.path)}
-            >
-              <img 
-                src={item.image} 
-                alt={item.title}
-                className="centro-historico-card-image"
-              />
-              <div className="centro-historico-card-content">
-                <h4 className="centro-historico-card-title">{item.title}</h4>
-                
-              </div>
-            </div>
+            />
           ))}
         </div>
       </div>

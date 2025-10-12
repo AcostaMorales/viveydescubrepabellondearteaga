@@ -22,9 +22,6 @@ const NavigationCard = ({
           }}
         />
       </div>
-      <div className="card-content">
-        <h3 className="card-title">{title}</h3>
-      </div>
     </div>
   );
 };

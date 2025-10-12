@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import NavigationCard from '../components/NavigationCard';
 import './TierraDeVinos.css';
 
 const TierraDeVinos = () => {
@@ -77,22 +78,14 @@ const TierraDeVinos = () => {
       {/* Navigation Section */}
       <div className="tierra-de-vinos-navigation">
         <h3 className="tierra-de-vinos-section-title">Bodegas y Viñedos para Visitar</h3>
-        <div className="tierra-de-vinos-grid">
-          {navigationItems.map((item, index) => (
-            <div 
-              key={item.id} 
-              className="tierra-de-vinos-card tierra-de-vinos-decoration"
+        <div className="navigation-grid">
+          {navigationItems.map(item => (
+            <NavigationCard
+              key={item.id}
+              image={item.image}
+              title={item.title}
               onClick={() => handleNavigation(item.path)}
-            >
-              <img 
-                src={item.image} 
-                alt={item.title}
-                className="tierra-de-vinos-card-image"
-              />
-              <div className="tierra-de-vinos-card-content">
-                <h4 className="tierra-de-vinos-card-title">{item.title}</h4>
-              </div>
-            </div>
+            />
           ))}
         </div>
       </div>
