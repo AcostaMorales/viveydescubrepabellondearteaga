@@ -2,17 +2,15 @@
 .footer {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 480px;
+  left: 0;
+  width: 100vw; /* Ancho completo de la ventana */
   height: var(--footer-height);
   background-color: var(--white);
   border-top: 1px solid var(--gray-light);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 0 var(--spacing-md);
+  padding: 0;
   z-index: 1000;
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -25,13 +23,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-sm);
+  padding: var(--spacing-xs);
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: all var(--transition);
-  flex: 1;
-  max-width: 80px;
-  min-height: 60px; /* Altura mínima para el botón */
+  flex: 1; /* Cada botón toma espacio igual */
+  min-width: 0; /* Permite que se comprima */
+  max-width: none; /* Permite expansión */
+  min-height: 60px;
 }
 
 .footer-button:hover {
@@ -42,10 +41,11 @@
 .footer-buttons-container {
   background-color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly; /* Distribuye uniformemente */
   align-items: center;
-  width: 100%;
-  padding: 0 var(--spacing-md);
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 0 var(--spacing-xs); /* Padding mínimo */
+  gap: 2px; /* Espacio mínimo entre botones */
 }
 
 .footer-icon {
@@ -53,69 +53,63 @@
   margin-bottom: 0.25rem;
 }
 
-/* Iconos de imagen - tamaños relativos al contenedor */
+/* Iconos de imagen - tamaños dinámicos basados en el viewport */
 .footer-icon-home,
 .footer-icon-aguscalientes,
 .footer-icon-mapa,
 .footer-icon-directorio-comercial,
 .footer-icon-promociones,
 .footer-icon-notificaciones {
-  width: 2.2rem; /* Tamaño relativo */
-  height: 2.2rem; /* Tamaño relativo */
-  margin-bottom: 0.25rem;
-  object-fit: contain; /* Mantiene proporciones */
-  max-width: 100%; /* No supera el contenedor */
-  max-height: 70%; /* Deja espacio para el texto */
+  width: clamp(20px, 4vw, 35px); /* Tamaño dinámico: mín 20px, máx 35px, 4% del viewport */
+  height: clamp(20px, 4vw, 35px);
+  margin-bottom: 0.2rem;
+  object-fit: contain;
 }
 
 .footer-text {
-  font-size: 0.75rem; /* Tamaño relativo */
+  font-size: clamp(8px, 2vw, 12px); /* Texto dinámico: mín 8px, máx 12px, 2% del viewport */
   color: var(--gray-medium);
   font-weight: 500;
   color: blue;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.1;
+  white-space: nowrap; /* Evita salto de línea */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agrega ... si es muy largo */
 }
 
 /* Responsive */
 @media (max-width: 480px) {
-  .footer {
-    left: 0;
-    transform: none;
-    border-radius: 0;
-    padding: 0 var(--spacing-sm);
+  .footer-buttons-container {
+    padding: 0 var(--spacing-xs);
+    gap: 1px;
   }
   
   .footer-button {
-    max-width: none; /* Permite expansión en móviles pequeños */
     min-height: 55px;
-    padding: var(--spacing-xs);
+    padding: 0.15rem;
   }
   
-  .footer-icon-home,
-  .footer-icon-aguscalientes,
-  .footer-icon-mapa,
-  .footer-icon-directorio-comercial,
-  .footer-icon-promociones,
-  .footer-icon-notificaciones {
-    width: 2rem;
-    height: 2rem;
-  }
-  
-  .footer-text {
-    font-size: 0.7rem;
-  }
-  
-  .footer-icon {
-    font-size: 1.3rem;
-  }
+  /* Los iconos se ajustan automáticamente con clamp() */
 }
 
 @media (max-width: 360px) {
   /* Dispositivos muy pequeños */
   .footer-button {
     min-height: 50px;
-    padding: 0.2rem;
+    padding: 0.1rem;
+  }
+  
+  .footer-buttons-container {
+    padding: 0 2px;
+    gap: 0;
+  }
+}
+
+@media (max-width: 280px) {
+  /* Dispositivos extremadamente pequeños */
+  .footer-text {
+    font-size: 7px !important;
   }
   
   .footer-icon-home,
@@ -124,36 +118,16 @@
   .footer-icon-directorio-comercial,
   .footer-icon-promociones,
   .footer-icon-notificaciones {
-    width: 1.8rem;
-    height: 1.8rem;
-  }
-  
-  .footer-text {
-    font-size: 0.65rem;
-  }
-  
-  .footer-icon {
-    font-size: 1.2rem;
+    width: 18px !important;
+    height: 18px !important;
   }
 }
 
 @media (min-width: 768px) {
-  /* Tablets y pantallas más grandes */
-  .footer-icon-home,
-  .footer-icon-aguscalientes,
-  .footer-icon-mapa,
-  .footer-icon-directorio-comercial,
-  .footer-icon-promociones,
-  .footer-icon-notificaciones {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-  
-  .footer-text {
-    font-size: 0.8rem;
-  }
-  
-  .footer-icon {
-    font-size: 1.6rem;
+  /* Tablets y pantallas más grandes mantienen tamaño máximo */
+  .footer-buttons-container {
+    max-width: 600px;
+    margin: 0 auto;
+    gap: var(--spacing-sm);
   }
 }
