@@ -31,8 +31,8 @@
   transition: all var(--transition);
   flex: 1; /* Cada botón toma espacio igual */
   min-width: 0; /* Permite que se comprima */
-  max-width: 80px; /* Tamaño máximo original */
-  min-height: 60px;
+  max-width: 70px; /* Tamaño máximo reducido para mejor ajuste */
+  min-height: 55px; /* Altura reducida */
 }
 
 .footer-button:hover {
@@ -61,14 +61,14 @@
 .footer-icon-directorio-comercial,
 .footer-icon-promociones,
 .footer-icon-notificaciones {
-  width: clamp(20px, 4vw, 35px); /* Tamaño dinámico: mín 20px, máx 35px, 4% del viewport */
-  height: clamp(20px, 4vw, 35px);
-  margin-bottom: 0.2rem;
+  width: clamp(16px, 3vw, 28px); /* Tamaño más pequeño: mín 16px, máx 28px, 3% del viewport */
+  height: clamp(16px, 3vw, 28px);
+  margin-bottom: 0.15rem; /* Margen reducido */
   object-fit: contain; /* Cambiado a contain para mejor calidad */
 }
 
 .footer-text {
-  font-size: clamp(8px, 2vw, 12px); /* Texto dinámico: mín 8px, máx 12px, 2% del viewport */
+  font-size: clamp(7px, 1.8vw, 10px); /* Texto más pequeño: mín 7px, máx 10px, 1.8% del viewport */
   color: var(--gray-medium);
   font-weight: 500;
   color: blue;
@@ -87,8 +87,9 @@
   }
   
   .footer-button {
-    min-height: 55px;
-    padding: 0.15rem;
+    min-height: 50px; /* Altura reducida en móviles */
+    padding: 0.1rem;
+    max-width: 65px; /* Ancho reducido en móviles */
   }
   
   /* Los iconos se ajustan automáticamente con clamp() */
@@ -97,8 +98,9 @@
 @media (max-width: 360px) {
   /* Dispositivos muy pequeños */
   .footer-button {
-    min-height: 50px;
-    padding: 0.1rem;
+    min-height: 45px; /* Altura muy reducida */
+    padding: 0.05rem;
+    max-width: 60px; /* Ancho muy reducido */
   }
   
   .footer-buttons-container {
@@ -110,7 +112,7 @@
 @media (max-width: 280px) {
   /* Dispositivos extremadamente pequeños */
   .footer-text {
-    font-size: 7px !important;
+    font-size: 6px !important; /* Texto muy pequeño */
   }
   
   .footer-icon-home,
@@ -119,8 +121,13 @@
   .footer-icon-directorio-comercial,
   .footer-icon-promociones,
   .footer-icon-notificaciones {
-    width: 18px !important;
-    height: 18px !important;
+    width: 14px !important; /* Iconos muy pequeños */
+    height: 14px !important;
+  }
+  
+  .footer-button {
+    max-width: 55px; /* Botones muy compactos */
+    min-height: 40px;
   }
 }
 
