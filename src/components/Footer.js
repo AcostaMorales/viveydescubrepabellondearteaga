@@ -9,6 +9,9 @@ const Footer = () => {
     <footer className="footer"
       style={{
         backgroundImage: 'url(/assents/imagenes/Fondopagina/FondoPiePagina.svg)',
+        backgroundRepeat: "repeat",
+        backgroundSize: "auto",
+        
       }}
     >
       <div className="footer-buttons-container">
