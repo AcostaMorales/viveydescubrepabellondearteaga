@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer"
       style={{
-        backgroundImage: 'url(/assents/imagenes/Fondopagina/FondoPiePagina.svg)',
+        backgroundImage: 'url(/assents/imagenes/Fondopagina/FondoPiePagina.png)',
         backgroundRepeat: "repeat",
         backgroundSize: "auto",
         
