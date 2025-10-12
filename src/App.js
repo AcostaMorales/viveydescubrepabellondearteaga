@@ -46,22 +46,7 @@ function App() {
             {/* Aquí agregaremos más rutas */}
           </Routes>
         </main>
-        <button
-        style={{
-          position: 'fixed',
-          bottom: '30px',
-          right: '20px',
-          backgroundColor: '#007BFF',
-          color: 'white',
-          border: 'none',
-          borderRadius: '50%',
-          width: '50px',
-          height: '50px',
-          fontSize: '24px',
-          cursor: 'pointer',
-        }}>
-          f
-        </button>
+        
         <Footer />
       </div>
     </Router>

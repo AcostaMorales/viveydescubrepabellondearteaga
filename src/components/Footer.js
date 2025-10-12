@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Footer.css';
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -11,6 +12,65 @@ const Footer = () => {
       backgroundImage: 'url(/assents/imagenes/Fondopagina/FondoPiePagina.svg)', 
     }}
     >
+      <button
+        style={{
+          position: 'absolute',
+          bottom: '100px',
+          right: '5px',
+          backgroundColor: '#1877F2',
+          color: 'white',
+          border: 'none',
+          borderRadius: '50%',
+          width: '50px',
+          height: '50px',
+          fontSize: '20px',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.3)',
+          cursor: 'pointer',
+        }}
+        onClick={() => window.open('https://facebook.com', '_blank')}
+      >
+        <FaFacebookF />
+        </button>
+        
+        <button
+        style={{
+          position: 'absolute',
+          bottom: '160px',
+          right: '5px',
+          backgroundColor: '#E1306C',
+          color: 'white',
+          border: 'none',
+          borderRadius: '50%',
+          width: '50px',
+          height: '50px',
+          fontSize: '20px',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.3)',
+          cursor: 'pointer',
+        }}
+        onClick={() => window.open('https://instagram.com', '_blank')}
+      >
+        <FaInstagram />
+        </button>
+        
+        <button
+        style={{
+          position: 'absolute',
+          bottom: '220px',
+          right: '5px',
+          backgroundColor: '#FF0000',
+          color: 'white',
+          border: 'none',
+          borderRadius: '50%',
+          width: '50px',
+          height: '50px',
+          fontSize: '20px',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.3)',
+          cursor: 'pointer',
+        }}
+        onClick={() => window.open('https://youtube.com', '_blank')}
+      >
+        <FaYoutube />
+        </button>
       
       <div className="footer-buttons-container">
         <button 
