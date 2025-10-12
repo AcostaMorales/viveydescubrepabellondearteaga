@@ -12,8 +12,8 @@
   --black: #000000;
   
   /* Header y Footer */
-  --header-height: 60px;
-  --footer-height: 70px;
+  --header-height: 80px;
+  --footer-height: 110px;
   
   /* Espaciado */
   --spacing-xs: 4px;

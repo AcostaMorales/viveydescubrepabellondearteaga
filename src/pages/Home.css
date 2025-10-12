@@ -58,6 +58,7 @@
 /* Navigation Section */
 .navigation-section {
   margin-top: var(--spacing-xl);
+  width: 100%;
 }
 
 .section-title {
@@ -66,6 +67,17 @@
   color: var(--gray-dark);
   margin-bottom: var(--spacing-lg);
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.75) ;
+}
+
+/* Contenedor de NavigationCards - Ancho completo */
+.navigation-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: 0;
+  margin: 0;
 }
 
 /* Responsive */
