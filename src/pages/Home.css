@@ -36,7 +36,7 @@
   /* Expandir para ocupar todo el ancho del cuerpo */
   margin-left: calc(-1 * var(--spacing-md));
   margin-right: calc(-1 * var(--spacing-md));
-  width: calc(100% + 5 * var(--spacing-md));
+  width: calc(100% + 3 * var(--spacing-md));
 }
 
 .video-placeholder {
