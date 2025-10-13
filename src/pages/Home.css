@@ -29,14 +29,14 @@
 
 /* Video Container */
 .video-container {
-  width: 100%;
+  
   margin-bottom: var(--spacing-lg);
   border-radius: 0; /* Sin esquinas redondeadas */
   overflow: hidden;
   
   /* Expandir para ocupar todo el ancho del cuerpo */
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   width: calc(100% + 0 * var(--spacing-md));
 }
 
