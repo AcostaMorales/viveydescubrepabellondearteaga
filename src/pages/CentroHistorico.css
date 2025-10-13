@@ -1,6 +1,6 @@
 /* Página Centro Histórico */
 .centro-historico-page {
-  padding: var(--spacing-lg);
+  padding: 12px;
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
   position: relative;
 }
