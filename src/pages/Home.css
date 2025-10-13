@@ -16,8 +16,8 @@
 .hero-section {
   text-align: center; /* Centra todo el contenido horizontalmente */
   margin-bottom: var(--spacing-xl); /* Espacio grande debajo - cambiar para separar más/menos del video */
-  margin-left: 20px; /* Margen izquierdo fijo - ajustar para centrar o mover */
-  margin-right: 23px; /* Margen derecho fijo - ajustar para centrar o mover */
+  margin-left: 19px; /* Margen izquierdo fijo - ajustar para centrar o mover */
+  margin-right: 22px; /* Margen derecho fijo - ajustar para centrar o mover */
 }
 
 /* Título principal "Vive y Descubre" */
