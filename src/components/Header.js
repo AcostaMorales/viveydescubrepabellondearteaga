@@ -30,17 +30,21 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
         <div className="left-section">
           {/* Botón de regreso (solo en páginas que no sean la principal) */}
           {!isHomePage && (
-            <button className="back-button" onClick={goBack} aria-label="Regresar">
+            <button
+              className="back-button"
+              onClick={goBack}
+              aria-label="Regresar"
+            >
               <SlArrowLeft size={24} />
             </button>
           )}
-          
+
           {/* Logo */}
           <div className="logo-container">
             <Link to="/" onClick={closeMenu}>
-              <img 
+              <img
                 src="/assents/imagenes/Logos/LogoPabellon.svg"
-                alt="Pabellón de Arteaga" 
+                alt="Pabellón de Arteaga"
                 className="logo"
               />
             </Link>
@@ -48,7 +52,7 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
         </div>
 
         {/* Menú hamburguesa a la derecha */}
-        <button 
+        <button
           className="menu-button"
           onClick={toggleMenu}
           aria-label="Abrir menú"
@@ -62,7 +66,7 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
       {/* Imagen de encabezado (opcional) */}
       {showHeaderImage && headerImage && (
         <div className="header-image-container">
-          <img 
+          <img
             src={headerImage}
             alt={headerAlt || "Imagen de encabezado"}
             className="header-image"
@@ -77,14 +81,36 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
           <nav className="side-menu" onClick={(e) => e.stopPropagation()}>
             <div className="menu-header">
               <h3>Navegación</h3>
-              <button className="close-button" onClick={closeMenu}>×</button>
+              <button className="close-button" onClick={closeMenu}>
+                ×
+              </button>
             </div>
             <ul className="menu-list">
-              <li><Link to="/" onClick={closeMenu}>Inicio</Link></li>
-              <li><Link to="/distritocomercial/hoteles" onClick={closeMenu}>Hoteles</Link></li>
-              <li><Link to="/distritocomercial/restaurantes" onClick={closeMenu}>Restaurantes</Link></li>
-              <li><Link to="/distritocomercial/vinicolas" onClick={closeMenu}>Vinicolas</Link></li>
-              <li><Link to="/distritocomercial/haciendas" onClick={closeMenu}>Haciendas</Link></li>
+              <li>
+                <Link to="/" onClick={closeMenu}>
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <Link to="/distritocomercial/hoteles" onClick={closeMenu}>
+                  Hoteles
+                </Link>
+              </li>
+              <li>
+                <Link to="/distritocomercial/restaurantes" onClick={closeMenu}>
+                  Restaurantes
+                </Link>
+              </li>
+              <li>
+                <Link to="/distritocomercial/vinicolas" onClick={closeMenu}>
+                  Vinicolas
+                </Link>
+              </li>
+              <li>
+                <Link to="/distritocomercial/haciendas" onClick={closeMenu}>
+                  Haciendas
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

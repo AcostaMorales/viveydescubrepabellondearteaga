@@ -133,22 +133,7 @@ const Footer = () => {
         />
         <span className="footer-text">Promociones</span>
       </button>
-
-      <button 
-        className="footer-button"
-        onClick={() => navigate('/notificaciones')}
-      >
-        <img
-          src = "/assents/imagenes/Iconos/campana.png"
-          alt = "Icono de notificaciones"
-          className="footer-icon-notificaciones"
-        />
-        <span className="footer-text">Notificaciones</span>
-      </button>
-
-      </div>
-      
-      
+      </div>  
     </footer>
   );
 };
