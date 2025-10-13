@@ -1,5 +1,5 @@
 import React from "react";
-import ImageHeader from "../components/ImageHeader";
+import Header from "../components/Header";
 import ImageCarousel from "../components/ImageCarousel";
 import "./AntiguaEstacion.css";
 
@@ -38,11 +38,13 @@ const AntiguaEstacion = () => {
 
   return (
     <div className="antigua-estacion-page">
-        {/* Usar el ImageHeader con una imagen específica */}
-        <ImageHeader 
-          imageSrc="/assents/imagenes/AntiguaEstacion/Encabezado.png"
-          imageAlt="Antigua estación"
+        {/* Header con imagen de fondo integrada */}
+        <Header 
+          headerImage="/assents/imagenes/AntiguaEstacion/Encabezado.png"
+          headerAlt="Antigua Estación del Ferrocarril"
+          showHeaderImage={true}
         />
+        
         {/* Contenido de la página con margen superior para no quedar detrás del header */} 
         <div className="antigua-estacion-content">
             <div className="antigua-estacion-history">

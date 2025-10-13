@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 import { SlArrowLeft } from "react-icons/sl";
 
-const Header = () => {
+const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -58,6 +58,18 @@ const Header = () => {
           <span className="hamburger"></span>
         </button>
       </header>
+
+      {/* Imagen de encabezado (opcional) */}
+      {showHeaderImage && headerImage && (
+        <div className="header-image-container">
+          <img 
+            src={headerImage}
+            alt={headerAlt || "Imagen de encabezado"}
+            className="header-image"
+          />
+          <div className="header-image-overlay"></div>
+        </div>
+      )}
 
       {/* Menú lateral */}
       {menuOpen && (
