@@ -35,8 +35,8 @@
   overflow: hidden;
   
   /* Expandir para ocupar todo el ancho del cuerpo */
-  margin-left: calc(-.5 * var(--spacing-md));
-  margin-right: calc(-1 * var(--spacing-md));
+  margin-left: 0;
+  margin-right: 0;
   width: calc(100% + 1 * var(--spacing-md));
 }
 
