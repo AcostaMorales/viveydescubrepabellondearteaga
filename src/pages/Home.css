@@ -35,9 +35,9 @@
   overflow: hidden;
   
   /* Expandir para ocupar todo el ancho del cuerpo */
-  margin-left: 7px;
-  margin-right: 7px;
-  width: calc(100% + 1 * var(--spacing-md));
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% + 0 * var(--spacing-md));
 }
 
 .video-placeholder {
