@@ -1,0 +1,157 @@
+/* =================================================================
+   PÁGINA DE NOTIFICACIONES
+   ================================================================= */
+
+.notificaciones-page {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+}
+
+.notificaciones-content {
+  padding: var(--spacing-lg);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =================================================================
+   ENCABEZADO DE NOTIFICACIONES
+   ================================================================= */
+.notificaciones-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.notificaciones-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.notificaciones-header p {
+  font-size: 16px;
+  color: var(--gray-dark);
+  margin: 0;
+}
+
+/* =================================================================
+   LISTA DE NOTIFICACIONES
+   ================================================================= */
+.notificaciones-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.notification-item {
+  background-color: var(--white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--gray-light);
+  position: relative;
+  transition: all var(--transition);
+}
+
+.notification-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Notificación no leída */
+.notification-item.unread {
+  border-left-color: var(--primary-color);
+  background-color: var(--primary-light);
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+  gap: var(--spacing-sm);
+}
+
+.notification-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-dark);
+  margin: 0;
+  flex: 1;
+}
+
+.notification-date {
+  font-size: 14px;
+  color: var(--gray-medium);
+  white-space: nowrap;
+}
+
+.notification-message {
+  font-size: 16px;
+  color: var(--gray-dark);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Indicador de no leída */
+.unread-indicator {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* Sin notificaciones */
+.no-notifications {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--gray-medium);
+}
+
+.no-notifications p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* =================================================================
+   RESPONSIVE DESIGN
+   ================================================================= */
+@media (max-width: 768px) {
+  .notificaciones-content {
+    padding: var(--spacing-md);
+  }
+  
+  .notification-item {
+    padding: var(--spacing-md);
+  }
+  
+  .notification-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .notification-date {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .notificaciones-header h1 {
+    font-size: 24px;
+  }
+  
+  .notification-header h3 {
+    font-size: 16px;
+  }
+  
+  .notification-message {
+    font-size: 14px;
+  }
+}

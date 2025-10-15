@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 import { SlArrowLeft } from "react-icons/sl";
 
-const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
+const Header = ({ headerImage, headerAlt, showHeaderImage = false, hasNotifications = false }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -21,6 +21,10 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
 
   const goBack = () => {
     navigate(-1); // Navega a la página anterior
+  };
+
+  const goToNotifications = () => {
+    navigate('/notificaciones');
   };
 
   return (
@@ -51,16 +55,37 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
           </div>
         </div>
 
-        {/* Menú hamburguesa a la derecha */}
-        <button
-          className="menu-button"
-          onClick={toggleMenu}
-          aria-label="Abrir menú"
-        >
-          <span className="hamburger"></span>
-          <span className="hamburger"></span>
-          <span className="hamburger"></span>
-        </button>
+        {/* Sección derecha: Botón de notificaciones y Menú hamburguesa */}
+        <div className="right-section">
+          {/* Botón de notificaciones */}
+          <button
+            className="notification-button"
+            onClick={goToNotifications}
+            aria-label="Ver notificaciones"
+          >
+            {/* Aquí puedes poner tu icono de notificaciones */}
+            <span className="notification-icon">
+              <img
+                src= "/assents/imagenes/Iconos/campana.png"
+                alt="Icono de notificaciones"
+                className='campanita'
+              />
+            </span>
+            {/* Indicador de notificaciones nuevas */}
+            {hasNotifications && <span className="notification-badge"></span>}
+          </button>
+
+          {/* Menú hamburguesa */}
+          <button
+            className="menu-button"
+            onClick={toggleMenu}
+            aria-label="Abrir menú"
+          >
+            <span className="hamburger"></span>
+            <span className="hamburger"></span>
+            <span className="hamburger"></span>
+          </button>
+        </div>
       </header>
 
       {/* Imagen de encabezado (opcional) */}

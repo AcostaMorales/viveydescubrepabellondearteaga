@@ -46,7 +46,8 @@
   justify-content: space-around; /* Distribución original */
   align-items: center;
   width: 100%; /* Ocupa todo el ancho disponible */
-  padding: 0 var(--spacing-md); /* Padding original */
+  padding: 0 var(--spacing-sm); /* Padding reducido para menos espacio entre botones */
+  gap: 2px; /* Espacio mínimo entre botones */
 }
 
 .footer-icon {
@@ -61,8 +62,8 @@
 .footer-icon-directorio-comercial,
 .footer-icon-promociones,
 .footer-icon-notificaciones {
-  width: clamp(16px, 3vw, 28px); /* Tamaño más pequeño: mín 16px, máx 28px, 3% del viewport */
-  height: clamp(16px, 3vw, 28px);
+  width: clamp(20px, 4vw, 32px); /* Tamaño más grande: mín 20px, máx 32px, 4% del viewport */
+  height: clamp(20px, 4vw, 32px);
   margin-bottom: 0.15rem; /* Margen reducido */
   object-fit: contain; /* Cambiado a contain para mejor calidad */
 }
@@ -82,8 +83,8 @@
 /* Responsive */
 @media (max-width: 480px) {
   .footer-buttons-container {
-    padding: 0 var(--spacing-xs);
-    gap: 1px;
+    padding: 0 4px; /* Padding muy reducido en móviles */
+    gap: 1px; /* Espacio mínimo */
   }
   
   .footer-button {
@@ -121,8 +122,8 @@
   .footer-icon-directorio-comercial,
   .footer-icon-promociones,
   .footer-icon-notificaciones {
-    width: 14px !important; /* Iconos muy pequeños */
-    height: 14px !important;
+    width: 16px !important; /* Iconos pequeños en pantallas extremas */
+    height: 16px !important;
   }
   
   .footer-button {
