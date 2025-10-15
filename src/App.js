@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import QueVer from './pages/QueVer';
 import CentroHistorico from './pages/CentroHistorico';
 import AntiguaEstacion from './pages/AntiguaEstacion';
+import ArchivoHistorico from './pages/ArchivoHistorico';
 import TierraDeVinos from "./pages/TierraDeVinos";
 import RutaReligiosa from "./pages/RutaReligiosa";
 import Notificaciones from "./pages/Notificaciones";
@@ -44,6 +45,7 @@ function App() {
             <Route path="/quever/tierradevinos" element={<TierraDeVinos />}/>
             <Route path="/quever/rutareligiosa" element={<RutaReligiosa />}/>
             <Route path="/quever/centrohistorico/antiguaestacion" element={<AntiguaEstacion />}/>
+            <Route path="/quever/centrohistorico/archivohistorico" element={<ArchivoHistorico />}/>
             <Route path="/notificaciones" element={<Notificaciones />}/>
             {/* Aquí agregaremos más rutas */}
           </Routes>

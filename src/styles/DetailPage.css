@@ -1,0 +1,316 @@
+/* =================================================================
+   DISEÑO TIPO APP MÓVIL MODERNA - VERSIÓN GENÉRICA REUTILIZABLE
+   ================================================================= */
+
+/* ===== CONTENEDOR PRINCIPAL DE PÁGINA ===== */
+.detail-page {
+  min-height: 100vh;
+  position: relative;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ===== CONTENIDO PRINCIPAL TIPO APP ===== */
+.detail-content {
+  margin-top: calc(var(--header-height) + 25vh); /* Header + imagen */
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  min-height: auto;
+  background: transparent;
+}
+
+/* ===== CONTENEDORES DE TARJETA TIPO APP ===== */
+.detail-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  margin: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0, 123, 255, 0.15),
+    0 2px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== TÍTULO PRINCIPAL ESTILO APP ===== */
+.detail-main-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding: var(--spacing-sm) 0;
+}
+
+/* Decoración del título principal */
+.detail-main-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* ===== PÁRRAFOS ESTILO APP ===== */
+.detail-paragraph {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.7;
+  color: #2c3e50;
+  margin-bottom: var(--spacing-md);
+  text-align: justify;
+  position: relative;
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+/* ===== TÍTULOS DE SECCIÓN ESTILO APP ===== */
+.detail-section-title {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #050505;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  position: relative;
+  padding: var(--spacing-sm) 0;
+}
+
+/* Título de sección con fondo blanco */
+.detail-section-title.with-background {
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: 12px;
+  box-shadow: 
+    0 4px 16px rgba(0, 123, 255, 0.1),
+    0 1px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ===== LISTAS ESTILO APP ===== */
+.detail-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.detail-list-item {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  line-height: 1.6;
+  color: #2c3e50;
+  font-weight: 500;
+  padding: var(--spacing-md);
+  background: transparent;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== CONTENIDO DE TEXTO LARGO ===== */
+.detail-text-content {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  line-height: 1.7;
+  color: #2c3e50;
+  font-weight: 500;
+  text-align: justify;
+  padding: var(--spacing-lg);
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== ANIMACIONES TIPO APP ===== */
+.detail-section {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: slideInScale 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Retrasos de animación para secciones múltiples */
+.detail-section:nth-child(1) { animation-delay: 0s; }
+.detail-section:nth-child(2) { animation-delay: 0.2s; }
+.detail-section:nth-child(3) { animation-delay: 0.4s; }
+.detail-section:nth-child(4) { animation-delay: 0.6s; }
+.detail-section:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes slideInScale {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== EFECTOS DE GLASSMORPHISM ===== */
+.detail-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ===== ICONOS DECORATIVOS PARA SECCIONES ===== */
+.detail-section-title.with-icon::before {
+  font-size: 1.5rem;
+  margin-right: var(--spacing-sm);
+  filter: drop-shadow(0 2px 4px rgba(0, 123, 255, 0.3));
+}
+
+/* ===== TÍTULOS DE CARRUSEL/GALERÍA ===== */
+.detail-carousel-title {
+  background: white !important;
+  padding: var(--spacing-md) !important;
+  border-radius: 12px !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 123, 255, 0.1),
+    0 1px 8px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  margin: var(--spacing-md) !important;
+  text-align: center !important;
+  font-size: clamp(1.4rem, 3vw, 1.8rem) !important;
+  font-weight: 700 !important;
+  color: #050505 !important;
+}
+
+/* ===== DISEÑO RESPONSIVE TIPO APP ===== */
+@media (max-width: 768px) {
+  .detail-content {
+    margin-top: calc(var(--header-height) + 25vh);
+    padding-top: var(--spacing-sm);
+  }
+  
+  .detail-section {
+    margin: var(--spacing-sm);
+    padding: var(--spacing-md);
+    border-radius: 16px;
+  }
+  
+  .detail-list-item {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .detail-text-content {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-content {
+    margin-top: calc(var(--header-height) + 25vh);
+    padding-top: var(--spacing-xs);
+  }
+  
+  .detail-section {
+    margin: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    border-radius: 12px;
+  }
+  
+  .detail-list-item {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 8px;
+  }
+  
+  .detail-text-content {
+    padding: var(--spacing-sm);
+    text-align: left;
+  }
+  
+  .detail-paragraph {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    text-align: left;
+  }
+}
+
+/* =================================================================
+   VARIANTES DE COLOR PARA DIFERENTES TIPOS DE PÁGINA
+   ================================================================= */
+
+/* Variante azul (por defecto) */
+.detail-page.blue .detail-main-title::after {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+/* Variante verde */
+.detail-page.green .detail-main-title::after {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.detail-page.green .detail-section {
+  box-shadow: 
+    0 8px 32px rgba(40, 167, 69, 0.15),
+    0 2px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Variante naranja */
+.detail-page.orange .detail-main-title::after {
+  background: linear-gradient(135deg, #fd7e14 0%, #e83e8c 100%);
+}
+
+.detail-page.orange .detail-section {
+  box-shadow: 
+    0 8px 32px rgba(253, 126, 20, 0.15),
+    0 2px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Variante morada */
+.detail-page.purple .detail-main-title::after {
+  background: linear-gradient(135deg, #6f42c1 0%, #e83e8c 100%);
+}
+
+.detail-page.purple .detail-section {
+  box-shadow: 
+    0 8px 32px rgba(111, 66, 193, 0.15),
+    0 2px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* =================================================================
+   CLASES DE UTILIDAD
+   ================================================================= */
+
+/* Centrar contenido */
+.detail-center {
+  text-align: center;
+}
+
+/* Alinear a la izquierda */
+.detail-left {
+  text-align: left;
+}
+
+/* Espaciado extra */
+.detail-section.extra-spacing {
+  margin: var(--spacing-lg);
+  padding: var(--spacing-xl);
+}
+
+/* Sin animación */
+.detail-section.no-animation {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
