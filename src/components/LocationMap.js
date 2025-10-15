@@ -17,8 +17,9 @@ const LocationMap = ({
   const appleMapsUrl = `https://maps.apple.com/?q=${latitude},${longitude}`;
   const wazeUrl = `https://waze.com/ul?ll=${latitude},${longitude}&navigate=yes`;
   
-  // URL para embeded map de Google Maps
-  const embedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.123!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM!5e0!3m2!1ses!2smx!4v1635789012345!5m2!1ses!2smx`;
+  // URL para embeded map de Google Maps con marcador visible
+  // Usando solo coordenadas exactas para mostrar la ubicación real precisa
+  const embedUrl = `https://maps.google.com/maps?q=${latitude},${longitude}&hl=es&z=16&output=embed`;
 
   const handleMapLoad = () => {
     setMapLoaded(true);

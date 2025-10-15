@@ -75,9 +75,9 @@ const AntiguaEstacion = () => {
 
             {/* Mapa y geolocalización */}
             <LocationMap 
-              latitude={21.9189}
-              longitude={-102.2901}
-              placeName="Antigua Estación del Ferrocarril"
+              latitude={22.1464336}
+              longitude={-102.2749591}
+              placeName="Antigua Estación de Ferrocarril"
               address="Pabellón de Arteaga, Aguascalientes, México"
               description="Sitio histórico emblemático del desarrollo ferroviario en la región"
               showDirections={true}
