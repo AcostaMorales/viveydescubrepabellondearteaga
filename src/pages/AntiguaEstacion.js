@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import ImageCarousel from "../components/ImageCarousel";
+import LocationMap from "../components/LocationMap";
 import "./AntiguaEstacion.css";
 
 const AntiguaEstacion = () => {
@@ -56,9 +57,9 @@ const AntiguaEstacion = () => {
             <div className="antigua-estacion-valor">
                 <h2 className="antigua-estacion-title">Valor turístico</h2>
                 <ul>
-                    <li>Representa la memoria viva del desarrollo ferroviario en la región.</li>
-                    <li>Sitio ideal para quienes buscan conocer el patrimonio histórico de Pabellón de Arteaga</li>
-                    <li>Lugar perfecto para el turismo cultural y de raíces.</li>
+                    <li>-Representa la memoria viva del desarrollo ferroviario en la región.</li>
+                    <li>-Sitio ideal para quienes buscan conocer el patrimonio histórico de Pabellón de Arteaga</li>
+                    <li>-Lugar perfecto para el turismo cultural y de raíces.</li>
                 </ul>
             </div>
             <div className="antigua-estacion-experiencia-visitante">
@@ -70,6 +71,17 @@ const AntiguaEstacion = () => {
             <ImageCarousel 
               images={galleryImages}
               title="Galería de imágenes"
+            />
+
+            {/* Mapa y geolocalización */}
+            <LocationMap 
+              latitude={21.9189}
+              longitude={-102.2901}
+              placeName="Antigua Estación del Ferrocarril"
+              address="Pabellón de Arteaga, Aguascalientes, México"
+              description="Sitio histórico emblemático del desarrollo ferroviario en la región"
+              showDirections={true}
+              mapHeight="350px"
             />
         </div>
     </div>

@@ -1,0 +1,302 @@
+/* =================================================================
+   COMPONENTE DE MAPA Y GEOLOCALIZACIÓN
+   ================================================================= */
+
+.location-map-container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  margin: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-radius: 20px;
+  box-shadow: 
+    0 8px 32px rgba(0, 123, 255, 0.15),
+    0 2px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* =================================================================
+   INFORMACIÓN DE UBICACIÓN
+   ================================================================= */
+.location-info {
+  margin-bottom: var(--spacing-lg);
+}
+
+.location-title {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #050505;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  position: relative;
+}
+
+.location-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.place-name {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+.location-address {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: #495057;
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+  font-weight: 500;
+}
+
+.location-description {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #6c757d;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* =================================================================
+   COORDENADAS
+   ================================================================= */
+.coordinates-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-sm);
+  background: rgba(0, 123, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 123, 255, 0.1);
+}
+
+.coordinates {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #495057;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+}
+
+.copy-coordinates-btn {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.copy-coordinates-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.copy-coordinates-btn:active {
+  transform: translateY(0);
+}
+
+/* =================================================================
+   CONTENEDOR DEL MAPA
+   ================================================================= */
+.map-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.map-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--spacing-sm);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.map-loading p {
+  color: #495057;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* =================================================================
+   BOTONES DE DIRECCIONES
+   ================================================================= */
+.directions-buttons {
+  text-align: center;
+}
+
+.directions-title {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: var(--spacing-md);
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--spacing-sm);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.direction-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 12px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-icon {
+  font-size: 1.1rem;
+}
+
+.google-maps {
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+  color: white;
+}
+
+.google-maps:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);
+}
+
+.apple-maps {
+  background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+  color: white;
+}
+
+.apple-maps:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.4);
+}
+
+.waze {
+  background: linear-gradient(135deg, #33ccff 0%, #0099cc 100%);
+  color: white;
+}
+
+.waze:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(51, 204, 255, 0.4);
+}
+
+.direction-btn:active {
+  transform: translateY(0);
+}
+
+/* =================================================================
+   DISEÑO RESPONSIVE
+   ================================================================= */
+@media (max-width: 768px) {
+  .location-map-container {
+    margin: var(--spacing-sm);
+    padding: var(--spacing-md);
+    border-radius: 16px;
+  }
+  
+  .coordinates-info {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    text-align: center;
+  }
+  
+  .buttons-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-map-container {
+    margin: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    border-radius: 12px;
+  }
+  
+  .coordinates-info {
+    padding: var(--spacing-xs);
+  }
+  
+  .copy-coordinates-btn {
+    padding: var(--spacing-xs);
+    font-size: 0.8rem;
+  }
+  
+  .direction-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.85rem;
+  }
+}
+
+/* =================================================================
+   ANIMACIONES DE ENTRADA
+   ================================================================= */
+.location-map-container {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: slideInScale 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes slideInScale {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
