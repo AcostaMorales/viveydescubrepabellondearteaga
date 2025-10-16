@@ -230,7 +230,7 @@
 
 @media (max-width: 480px) {
   .detail-content {
-    margin-top: var(--total-header-height);
+    
     padding-top: 0; /* Sin espacio superior adicional */
   }
   
