@@ -16,7 +16,6 @@
 /* ===== CONTENIDO PRINCIPAL TIPO APP ===== */
 .detail-content { 
   padding-top: 0; /* Sin espacio superior adicional */
-  padding-bottom: var(--spacing-md);
   min-height: auto;
   background: transparent;
   /* Resetear cualquier scroll previo */
