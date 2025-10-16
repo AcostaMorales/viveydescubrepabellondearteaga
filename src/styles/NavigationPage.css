@@ -9,8 +9,8 @@
 /* Header Section - Adaptado para imagen integrada */
 .navigation-header {
   text-align: center;
-   
-  margin-bottom: var(--spacing-xl);
+  margin-top: var(--total-header-height); /* Usa la altura dinámica del header */
+  margin-bottom: 0; /* Sin margen inferior para eliminar espacio */
   padding: var(--spacing-lg) var(--spacing-md);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(15px);
@@ -32,6 +32,8 @@
 
 /* Navigation Section - Espaciado ajustado */
 .navigation-content {
+  margin-top: 0; /* Sin margen superior adicional */
+  padding: 0 var(--spacing-md);
   padding-bottom: var(--spacing-xl);
 }
 
@@ -39,6 +41,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   color: #050001;
+  margin-top: var(--spacing-lg); /* Separación del header */
   margin-bottom: var(--spacing-xl);
   text-align: center;
   position: relative;
@@ -69,7 +72,7 @@
   background: var(--white);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  
+  box-shadow: var(--shadow); /* Sombra por defecto */
   transition: all var(--transition);
   cursor: pointer;
   position: relative;
@@ -173,18 +176,21 @@
 @media (max-width: 768px) {
   .navigation-header {
     margin-top: var(--total-header-height);
+    margin-bottom: 0; /* Sin margen inferior */
     margin-left: var(--spacing-sm);
     margin-right: var(--spacing-sm);
     padding: var(--spacing-md);
   }
   
   .navigation-content {
+    margin-top: 0; /* Sin margen superior adicional */
     padding: 0 var(--spacing-sm);
     padding-bottom: var(--spacing-lg);
   }
   
-  .navigation-title {
-    font-size: 2rem;
+  .navigation-section-title {
+    margin-top: var(--spacing-md); /* Menos separación en móvil */
+    font-size: 1.5rem;
   }
   
   .navigation-subtitle {
@@ -209,14 +215,20 @@
 @media (max-width: 480px) {
   .navigation-header {
     margin-top: var(--total-header-height);
+    margin-bottom: 0; /* Sin margen inferior */
     margin-left: var(--spacing-xs);
     margin-right: var(--spacing-xs);
     padding: var(--spacing-sm);
   }
   
   .navigation-content {
+    margin-top: 0; /* Sin margen superior adicional */
     padding: 0 var(--spacing-xs);
     padding-bottom: var(--spacing-md);
+  }
+  
+  .navigation-section-title {
+    margin-top: var(--spacing-sm); /* Menos separación en móvil pequeño */
   }
   
   .navigation-title {
