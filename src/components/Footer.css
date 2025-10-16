@@ -62,7 +62,7 @@
 .footer-icon-directorio-comercial,
 .footer-icon-promociones,
 .footer-icon-notificaciones {
-  width: clamp(20px, 4vw, 32px); /* Tamaño más grande: mín 20px, máx 32px, 4% del viewport */
+  width: clamp(25px, 4vw, 32px); /* Tamaño más grande: mín 20px, máx 32px, 4% del viewport */
   height: clamp(20px, 4vw, 32px);
   margin-bottom: 0.15rem; /* Margen reducido */
   object-fit: contain; /* Cambiado a contain para mejor calidad */
