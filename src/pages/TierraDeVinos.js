@@ -80,10 +80,6 @@ const TierraDeVinos = () => {
           headerAlt="Tierra de Vinos"
           showHeaderImage={true}
         />
-      {/* Header Section */}
-      <div className="navigation-header">
-        <h1 className="navigation-title">Tierra de Vinos</h1>
-      </div>
 
 
       {/* Navigation Section */}

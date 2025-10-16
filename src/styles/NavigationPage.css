@@ -6,21 +6,6 @@
   -webkit-overflow-scrolling: touch;
 }
 
-/* Header Section - Adaptado para imagen integrada */
-.navigation-header {
-  text-align: center;
-  margin-top: var(--total-header-height); /* Usa la altura dinámica del header */
-  margin-bottom: 0; /* Sin margen inferior para eliminar espacio */
-  padding: var(--spacing-lg) var(--spacing-md);
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow);
-  margin-left: var(--spacing-md);
-  margin-right: var(--spacing-md);
-}
-
 .navigation-title {
   font-size: 2.5rem;
   font-weight: 700;
