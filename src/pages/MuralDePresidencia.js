@@ -17,28 +17,16 @@ const MuralDePresidencia = () => {
         alt: alt1
     },
     {
-        src: "/assents/imagenes/MuralDePresidencia/Carrusel/MuralDePresidenciaC1.jpeg",
+        src: "/assents/imagenes/MuralDePresidencia/Carrusel/MuralDePresidenciaC2.jpeg",
         alt: alt1
 
     },
     {
-        src: "/assents/imagenes/MuralDePresidencia/Carrusel/MuralDePresidenciaC1.jpeg",
+        src: "/assents/imagenes/MuralDePresidencia/Carrusel/MuralDePresidenciaC3.jpeg",
         alt: alt1
     },
     {
-        src: "/assents/imagenes/MuralDePresidencia/Carrusel/MuralDePresidenciaC1.jpeg",
-        alt: alt1
-    },
-    {
-        src: "/assents/imagenes/MuralDePresidencia/Carrusel/MuralDePresidenciaC1.jpeg",
-        alt: alt1
-    },
-    {
-        src: "/assents/imagenes/MuralDePresidencia/Carrusel/MuralDePresidenciaC1.jpeg",
-        alt: alt1
-    },
-    {
-        src: "/assents/imagenes/MuralDePresidencia/Carrusel/MuralDePresidenciaC1.jpeg",
+        src: "/assents/imagenes/MuralDePresidencia/Carrusel/MuralDePresidenciaC4.jpeg",
         alt: alt1
     }
     ];
@@ -97,9 +85,9 @@ const MuralDePresidencia = () => {
             <LocationMap 
               latitude={22.1494575}
               longitude={-102.2765541}
-              placeName="Archivo Histórico Municipal"
+              placeName="Mural de Presidencia Municipal"
               address="Pabellón de Arteaga, Aguascalientes, México"
-              description="Sitio histórico y cultural que preserva la memoria del municipio"
+              description="Obra plástica que narra la historia y cultura del municipio"
               showDirections={true}
               mapHeight="350px"
             />

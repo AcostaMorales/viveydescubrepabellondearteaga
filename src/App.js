@@ -12,6 +12,7 @@ import ArchivoHistorico from './pages/ArchivoHistorico';
 import CasaDeMadera from './pages/CasaDeMadera';
 import MonumentoALaVendimia from './pages/MonumentoALaVendimia';
 import MuralDePresidencia from './pages/MuralDePresidencia';
+import MuseoDeCasa from './pages/MuseoDeCasa';
 
 //Tierra de vinos
 import TierraDeVinos from "./pages/TierraDeVinos";
@@ -56,6 +57,7 @@ function App() {
             <Route path="/quever/centrohistorico/casademadera" element={<CasaDeMadera />}/>
             <Route path="/quever/centrohistorico/monumentoalavendimia" element={<MonumentoALaVendimia />}/>
             <Route path="/quever/centrohistorico/muraldepresidencia" element={<MuralDePresidencia />}/>
+            <Route path="/quever/centrohistorico/museodecasa" element={<MuseoDeCasa />}/>
             <Route path="/notificaciones" element={<Notificaciones />}/>
             {/* Aquí agregaremos más rutas */}
           </Routes>
