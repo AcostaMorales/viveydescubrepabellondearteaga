@@ -108,11 +108,11 @@ const ParqueInfantil = () => {
 
             {/* Mapa y geolocalización */}
             <LocationMap 
-              latitude={22.1458032}
-              longitude={-102.2761449}
-              placeName="Archivo Histórico Municipal"
+              latitude={22.1505333}
+              longitude={-102.2761075}
+              placeName="Parque Infantil"
               address="Pabellón de Arteaga, Aguascalientes, México"
-              description="Sitio histórico y cultural que preserva la memoria del municipio"
+              description="Espacio público recreativo / parque familiar con albercas"
               showDirections={true}
               mapHeight="350px"
             />
