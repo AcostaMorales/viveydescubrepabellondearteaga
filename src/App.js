@@ -15,6 +15,7 @@ import MuralDePresidencia from './pages/MuralDePresidencia';
 import MuseoDeCasa from './pages/MuseoDeCasa';
 import ParqueInfantil from './pages/ParqueInfantil';
 import PlazaPrincipal from './pages/PlazaPrincipal';
+import Reloj from './pages/Reloj';
 
 //Tierra de vinos
 import TierraDeVinos from "./pages/TierraDeVinos";
@@ -64,6 +65,7 @@ function App() {
             <Route path="/quever/centrohistorico/museodecasa" element={<MuseoDeCasa />}/>
             <Route path="/quever/centrohistorico/parqueinfantil" element={<ParqueInfantil />}/>
             <Route path="/quever/centrohistorico/plazaprincipal" element={<PlazaPrincipal />}/>
+            <Route path="/quever/centrohistorico/reloj" element={<Reloj />}/>
 
             {/* Rutas para las páginas de Tierra de Vinos */}
             <Route path="/notificaciones" element={<Notificaciones />}/>
