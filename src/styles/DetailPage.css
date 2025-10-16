@@ -8,6 +8,9 @@
   position: relative;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  /* Asegurar que siempre inicie desde la parte superior */
+  scroll-margin-top: 0;
+  padding-top: 0;
 }
 
 /* ===== CONTENIDO PRINCIPAL TIPO APP ===== */
@@ -17,6 +20,9 @@
   padding-bottom: var(--spacing-md);
   min-height: auto;
   background: transparent;
+  /* Resetear cualquier scroll previo */
+  position: relative;
+  top: 0;
 }
 
 /* ===== CONTENEDORES DE TARJETA TIPO APP ===== */

@@ -2,9 +2,13 @@ import React from "react";
 import Header from "../components/Header";
 import ImageCarousel from "../components/ImageCarousel";
 import LocationMap from "../components/LocationMap";
+import useScrollToTop from "../hooks/useScrollToTop";
 import "./AntiguaEstacion.css";
 
 const AntiguaEstacion = () => {
+  // Hook para hacer scroll al inicio al cargar la página
+  useScrollToTop();
+  
   // Datos de las imágenes para el carrusel
   const galleryImages = [
     {
