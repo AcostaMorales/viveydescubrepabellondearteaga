@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import './Notificaciones.css';
 
 const Notificaciones = () => {
@@ -31,7 +30,10 @@ const Notificaciones = () => {
 
   return (
     <div className="notificaciones-page">
-      <Header />
+      <Header 
+        showHeaderImage={false}
+        hasNotifications={false}
+      />
       
       <div className="notificaciones-content">
         <div className="notificaciones-header">
@@ -61,8 +63,6 @@ const Notificaciones = () => {
           )}
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

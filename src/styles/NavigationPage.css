@@ -1,5 +1,5 @@
-/* Página Tierra de Vinos - Adaptada al header con imagen */
-.tierra-de-vinos-page {
+/* Página de Navegación - CSS genérico reutilizable */
+.navigation-page {
   min-height: 100vh;
   position: relative;
   scroll-behavior: smooth;
@@ -7,9 +7,9 @@
 }
 
 /* Header Section - Adaptado para imagen integrada */
-.tierra-de-vinos-header {
+.navigation-header {
   text-align: center;
-   /* Usa la altura dinámica del header */
+   
   margin-bottom: var(--spacing-xl);
   padding: var(--spacing-lg) var(--spacing-md);
   background: rgba(255, 255, 255, 0.95);
@@ -21,7 +21,7 @@
   margin-right: var(--spacing-md);
 }
 
-.tierra-de-vinos-title {
+.navigation-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: #000000;
@@ -31,13 +31,11 @@
 
 
 /* Navigation Section - Espaciado ajustado */
-.tierra-de-vinos-navigation {
-  margin-top: var(--spacing-lg);
-  padding: 0 var(--spacing-md);
+.navigation-content {
   padding-bottom: var(--spacing-xl);
 }
 
-.tierra-de-vinos-section-title {
+.navigation-section-title {
   font-size: 1.8rem;
   font-weight: 600;
   color: #050001;
@@ -46,7 +44,7 @@
   position: relative;
 }
 
-.tierra-de-vinos-section-title::after {
+.navigation-section-title::after {
   content: '';
   position: absolute;
   bottom: -8px;
@@ -58,33 +56,33 @@
   border-radius: 2px;
 }
 
-/* Grid personalizado para Tierra de Vinos - Sin padding duplicado */
-.tierra-de-vinos-grid {
+/* Grid personalizado para navegación - Sin padding duplicado */
+.navigation-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-lg);
   padding: 0; /* Eliminado padding ya que se maneja en navigation */
 }
 
-/* Tarjetas especiales para Tierra de Vinos */
-.tierra-de-vinos-card {
+/* Tarjetas especiales para navegación */
+.navigation-card {
   background: var(--white);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow);
+  
   transition: all var(--transition);
   cursor: pointer;
   position: relative;
   border: 2px solid transparent;
 }
 
-.tierra-de-vinos-card:hover {
+.navigation-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: #a366a3;
 }
 
-.tierra-de-vinos-card::before {
+.navigation-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -96,11 +94,11 @@
   transition: opacity var(--transition);
 }
 
-.tierra-de-vinos-card:hover::before {
+.navigation-card:hover::before {
   opacity: 1;
 }
 
-.tierra-de-vinos-card-image {
+.navigation-card-image {
   width: 100%;
   height: 180px;
   object-fit: contain;
@@ -109,23 +107,23 @@
   border-radius: var(--border-radius);
 }
 
-.tierra-de-vinos-card:hover .tierra-de-vinos-card-image {
+.navigation-card:hover .navigation-card-image {
   transform: scale(1.05);
 }
 
-.tierra-de-vinos-card-content {
+.navigation-card-content {
   padding: var(--spacing-lg);
   text-align: center;
 }
 
-.tierra-de-vinos-card-title {
+.navigation-card-title {
   font-size: 1.1rem;
   font-weight: 600;
   color: #000000;
   margin-bottom: var(--spacing-sm);
 }
 
-.tierra-de-vinos-card-description {
+.navigation-card-description {
   font-size: 0.9rem;
   color: var(--gray-medium);
   line-height: 1.4;
@@ -133,7 +131,7 @@
 }
 
 /* Badge para destacar lugares especiales */
-.tierra-de-vinos-badge {
+.navigation-badge {
   position: absolute;
   top: var(--spacing-md);
   right: var(--spacing-md);
@@ -149,7 +147,7 @@
 
 
 /* Información adicional */
-.tierra-de-vinos-info {
+.navigation-info {
   background: var(--white);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-xl);
@@ -158,14 +156,14 @@
   border-left: 4px solid #722f37;
 }
 
-.tierra-de-vinos-info-title {
+.navigation-info-title {
   font-size: 1.4rem;
   font-weight: 600;
   color: #722f37;
   margin-bottom: var(--spacing-md);
 }
 
-.tierra-de-vinos-info-text {
+.navigation-info-text {
   color: var(--gray-dark);
   line-height: 1.6;
   font-size: 1rem;
@@ -173,68 +171,68 @@
 
 /* Responsive Design - Adaptado al nuevo layout */
 @media (max-width: 768px) {
-  .tierra-de-vinos-header {
+  .navigation-header {
     margin-top: var(--total-header-height);
     margin-left: var(--spacing-sm);
     margin-right: var(--spacing-sm);
     padding: var(--spacing-md);
   }
   
-  .tierra-de-vinos-navigation {
+  .navigation-content {
     padding: 0 var(--spacing-sm);
     padding-bottom: var(--spacing-lg);
   }
   
-  .tierra-de-vinos-title {
+  .navigation-title {
     font-size: 2rem;
   }
   
-  .tierra-de-vinos-subtitle {
+  .navigation-subtitle {
     font-size: 1rem;
   }
   
-  .tierra-de-vinos-grid {
+  .navigation-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
   
-  .tierra-de-vinos-card-image {
+  .navigation-card-image {
     height: 160px;
     padding: var(--spacing-xs);
   }
   
-  .tierra-de-vinos-section-title {
+  .navigation-section-title {
     font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .tierra-de-vinos-header {
+  .navigation-header {
     margin-top: var(--total-header-height);
     margin-left: var(--spacing-xs);
     margin-right: var(--spacing-xs);
     padding: var(--spacing-sm);
   }
   
-  .tierra-de-vinos-navigation {
+  .navigation-content {
     padding: 0 var(--spacing-xs);
     padding-bottom: var(--spacing-md);
   }
   
-  .tierra-de-vinos-title {
+  .navigation-title {
     font-size: 1.6rem;
   }
   
-  .tierra-de-vinos-card-content {
+  .navigation-card-content {
     padding: var(--spacing-md);
   }
   
-  .tierra-de-vinos-card-image {
+  .navigation-card-image {
     height: 140px;
     padding: var(--spacing-xs);
   }
   
-  .tierra-de-vinos-info {
+  .navigation-info {
     padding: var(--spacing-lg);
   }
 }
@@ -251,22 +249,22 @@
   }
 }
 
-.tierra-de-vinos-card {
+.navigation-card {
   animation: fadeInUp 0.6s ease-out;
 }
 
-.tierra-de-vinos-card:nth-child(1) { animation-delay: 0.1s; }
-.tierra-de-vinos-card:nth-child(2) { animation-delay: 0.2s; }
-.tierra-de-vinos-card:nth-child(3) { animation-delay: 0.3s; }
-.tierra-de-vinos-card:nth-child(4) { animation-delay: 0.4s; }
-.tierra-de-vinos-card:nth-child(5) { animation-delay: 0.5s; }
-.tierra-de-vinos-card:nth-child(6) { animation-delay: 0.6s; }
-.tierra-de-vinos-card:nth-child(7) { animation-delay: 0.7s; }
-.tierra-de-vinos-card:nth-child(8) { animation-delay: 0.8s; }
-.tierra-de-vinos-card:nth-child(9) { animation-delay: 0.9s; }
+.navigation-card:nth-child(1) { animation-delay: 0.1s; }
+.navigation-card:nth-child(2) { animation-delay: 0.2s; }
+.navigation-card:nth-child(3) { animation-delay: 0.3s; }
+.navigation-card:nth-child(4) { animation-delay: 0.4s; }
+.navigation-card:nth-child(5) { animation-delay: 0.5s; }
+.navigation-card:nth-child(6) { animation-delay: 0.6s; }
+.navigation-card:nth-child(7) { animation-delay: 0.7s; }
+.navigation-card:nth-child(8) { animation-delay: 0.8s; }
+.navigation-card:nth-child(9) { animation-delay: 0.9s; }
 
-/* Efectos especiales para tema de vinos */
-.tierra-de-vinos-highlight {
+/* Efectos especiales para tema de navegación */
+.navigation-highlight {
   background: linear-gradient(120deg, transparent 0%, #a366a3 50%, transparent 100%);
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
@@ -277,12 +275,51 @@
   100% { background-position: 200% 0; }
 }
 
-/* Efectos de hover especiales para vinos */
-.tierra-de-vinos-card:hover {
+/* Efectos de hover especiales */
+.navigation-card:hover {
   box-shadow: 0 8px 25px rgba(114, 47, 55, 0.2);
 }
 
-.tierra-de-vinos-badge:hover {
+.navigation-badge:hover {
   background: linear-gradient(45deg, #722f37, #8b4a5e);
   transform: scale(1.05);
+}
+
+/* =================================================================
+   VARIANTES DE COLOR PARA DIFERENTES TIPOS DE PÁGINA
+   ================================================================= */
+
+/* Variante vinos (por defecto) */
+.navigation-page.wine .navigation-section-title::after {
+  background: linear-gradient(90deg, #722f37, #8b4a5e, #a366a3);
+}
+
+/* Variante azul */
+.navigation-page.blue .navigation-section-title::after {
+  background: linear-gradient(90deg, #007bff, #0056b3, #004085);
+}
+
+.navigation-page.blue .navigation-card:hover {
+  border-color: #007bff;
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2);
+}
+
+/* Variante verde */
+.navigation-page.green .navigation-section-title::after {
+  background: linear-gradient(90deg, #28a745, #20c997, #17a2b8);
+}
+
+.navigation-page.green .navigation-card:hover {
+  border-color: #28a745;
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.2);
+}
+
+/* Variante naranja */
+.navigation-page.orange .navigation-section-title::after {
+  background: linear-gradient(90deg, #fd7e14, #e83e8c, #dc3545);
+}
+
+.navigation-page.orange .navigation-card:hover {
+  border-color: #fd7e14;
+  box-shadow: 0 8px 25px rgba(253, 126, 20, 0.2);
 }

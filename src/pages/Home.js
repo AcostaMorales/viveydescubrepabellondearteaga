@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 import NavigationCard from '../components/NavigationCard';
 import './Home.css';
 
@@ -39,6 +40,12 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      {/* Header sin imagen para la página principal */}
+      <Header 
+        showHeaderImage={false}
+        hasNotifications={true}
+      />
+      
       {/* Hero Section */}
       <div className="hero-section">
         <h1 className="main-title">Vive y Descubre</h1>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 import { SlArrowLeft } from "react-icons/sl";
@@ -10,6 +10,24 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false, hasNotificati
   
   // Verificar si estamos en la página principal
   const isHomePage = location.pathname === '/';
+
+  // Efecto para aplicar la clase CSS apropiada al body
+  useEffect(() => {
+    const bodyElement = document.body;
+    
+    if (showHeaderImage && headerImage) {
+      bodyElement.classList.remove('body-without-header-image');
+      bodyElement.classList.add('body-with-header-image');
+    } else {
+      bodyElement.classList.remove('body-with-header-image');
+      bodyElement.classList.add('body-without-header-image');
+    }
+
+    // Cleanup: remover clases al desmontar el componente
+    return () => {
+      bodyElement.classList.remove('body-with-header-image', 'body-without-header-image');
+    };
+  }, [showHeaderImage, headerImage]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

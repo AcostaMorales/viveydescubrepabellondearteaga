@@ -1,9 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 import NavigationCard from '../components/NavigationCard';
-import './TierraDeVinos.css';
+import useScrollToTop from '../hooks/useScrollToTop';
+import '../styles/NavigationPage.css';
 
 const TierraDeVinos = () => {
+  // Hook para hacer scroll al inicio al cargar la página
+  useScrollToTop();
+  
   const navigate = useNavigate();
   
   const navigationItems = [
@@ -68,16 +73,22 @@ const TierraDeVinos = () => {
   };
 
   return (
-    <div className="tierra-de-vinos-page">
+    
+    <div className="navigation-page wine">
+      <Header 
+          headerImage="/assents/imagenes/TierraDeVino/Encabezado.png"
+          headerAlt="Tierra de Vinos"
+          showHeaderImage={true}
+        />
       {/* Header Section */}
-      <div className="tierra-de-vinos-header">
-        <h1 className="tierra-de-vinos-title">Tierra de Vinos</h1>
+      <div className="navigation-header">
+        <h1 className="navigation-title">Tierra de Vinos</h1>
       </div>
 
 
       {/* Navigation Section */}
-      <div className="tierra-de-vinos-navigation">
-        <h3 className="tierra-de-vinos-section-title">Bodegas y Viñedos para Visitar</h3>
+      <div className="navigation-content">
+        <h3 className="navigation-section-title">Bodegas y Viñedos para Visitar</h3>
         <div className="navigation-grid">
           {navigationItems.map(item => (
             <NavigationCard

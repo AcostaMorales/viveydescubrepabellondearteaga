@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 import NavigationCard from '../components/NavigationCard';
-import './CentroHistorico.css';
+import '../styles/NavigationPage.css';
 
 const CentroHistorico = () => {
   const navigate = useNavigate();
@@ -68,16 +69,22 @@ const CentroHistorico = () => {
   };
 
   return (
-    <div className="centro-historico-page">
+    <div className="navigation-page blue">
+      {/* Header sin imagen para la página Centro Histórico */}
+      <Header 
+        showHeaderImage={false}
+        hasNotifications={true}
+      />
+      
       {/* Header Section */}
-      <div className="centro-historico-header">
-        <h1 className="centro-historico-title">Centro Histórico</h1>
+      <div className="navigation-header">
+        <h1 className="navigation-title">Centro Histórico</h1>
       </div>
 
 
       {/* Navigation Section */}
-      <div className="centro-historico-navigation">
-        <h3 className="centro-historico-section-title">Lugares para Visitar</h3>
+      <div className="navigation-content">
+        <h3 className="navigation-section-title">Lugares para Visitar</h3>
         <div className="navigation-grid">
           {navigationItems.map(item => (
             <NavigationCard
