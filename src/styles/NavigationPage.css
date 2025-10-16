@@ -34,7 +34,6 @@
 .navigation-content {
   margin-top: 0; /* Sin margen superior adicional */
   padding: 0 var(--spacing-md);
-  padding-bottom: var(--spacing-xl);
 }
 
 .navigation-section-title {
@@ -184,8 +183,8 @@
   
   .navigation-content {
     margin-top: 0; /* Sin margen superior adicional */
-    padding: 0 var(--spacing-sm);
-    padding-bottom: var(--spacing-lg);
+    padding: 0 ;
+    
   }
   
   .navigation-section-title {

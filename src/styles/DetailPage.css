@@ -230,7 +230,7 @@
 
 @media (max-width: 480px) {
   .detail-content {
-    
+    margin-top: 20px;
     padding-top: 0; /* Sin espacio superior adicional */
   }
   
