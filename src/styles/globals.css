@@ -100,7 +100,6 @@ html, body {
   .app-layout {
     border-radius: var(--border-radius-lg);
     margin-top: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
     height: calc(100vh - 48px);
     max-width: 480px; /* Mantener ancho móvil en desktop */
   }
