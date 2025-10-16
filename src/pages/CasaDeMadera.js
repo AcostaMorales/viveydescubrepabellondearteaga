@@ -79,7 +79,7 @@ const ArchivoHistorico = () => {
               longitude={-102.2761482}
               placeName="Archivo Histórico Municipal"
               address="Pabellón de Arteaga, Aguascalientes, México"
-              description="Sitio histórico y cultural que preserva la memoria del municipio"
+              description="Lugar emblemático que preserva la memoria de los primeros pobladores y ferrocarrileros"
               showDirections={true}
               mapHeight="350px"
             />
