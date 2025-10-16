@@ -30,8 +30,7 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  margin: var(--spacing-sm) var(--spacing-md); /* Solo márgenes laterales */
-  margin-top: 0; /* Sin margen superior para la primera sección */
+  margin: 0 var(--spacing-md); /* Solo márgenes laterales */
   padding: var(--spacing-lg);
   border-radius: 20px;
   box-shadow: 
@@ -214,7 +213,6 @@
   
   .detail-section {
     margin: 0 var(--spacing-sm); /* Solo márgenes laterales */
-    margin-top: 0;
     padding: var(--spacing-md);
     border-radius: 16px;
   }
@@ -240,7 +238,6 @@
   
   .detail-section {
     margin: 0 var(--spacing-xs); /* Solo márgenes laterales */
-    margin-top: 0;
     padding: var(--spacing-sm);
     border-radius: 12px;
   }
