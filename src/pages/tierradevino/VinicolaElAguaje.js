@@ -106,7 +106,7 @@ const RanchoUbuntu = () => {
             {/* Mapa y geolocalización */}
             <LocationMap 
               latitude={22.0812702}
-              longitude={-102.331163}
+              longitude={-102.3337379}
               placeName="Vinicola El Aguaje"
               address="Pabellon de Arteaga, Aguascalientes, México"
               description=""

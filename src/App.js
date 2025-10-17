@@ -33,6 +33,7 @@ import HRealDePlata from './pages/tierradevino/HRealDePlata';
 import SegundaParte from './pages/tierradevino/SegundaParte';
 import VinaLasCruces from './pages/tierradevino/VinaLasCruces';
 import VinicolaElAguaje from './pages/tierradevino/VinicolaElAguaje';
+import VinicolaElSarmiento from './pages/tierradevino/VinicolaElSarmiento';
 
 // Estilos globales
 import './styles/globals.css';
@@ -86,6 +87,7 @@ function App() {
             <Route path="/quever/tierradevinos/segundaparte" element={<SegundaParte />}/>
             <Route path="/quever/tierradevinos/vinedolascruces" element={<VinaLasCruces />}/>
             <Route path="/quever/tierradevinos/vinicolaelaguaje" element={<VinicolaElAguaje />}/>
+            <Route path="/quever/tierradevinos/vinicolaelsarmiento" element={<VinicolaElSarmiento />}/>
 
             {/* Rutas para las páginas de Tierra de Vinos */}
             <Route path="/notificaciones" element={<Notificaciones />}/>
