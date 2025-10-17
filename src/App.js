@@ -1,26 +1,31 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Componentes
 import Footer from './components/Footer';
+
+// Páginas principales
 import Home from './pages/Home';
 import QueVer from './pages/QueVer';
-//Centro historico
-import CentroHistorico from './pages/CentroHistorico';
-//Paginas centro historico
-import AntiguaEstacion from './pages/AntiguaEstacion';
-import ArchivoHistorico from './pages/ArchivoHistorico';
-import CasaDeMadera from './pages/CasaDeMadera';
-import MonumentoALaVendimia from './pages/MonumentoALaVendimia';
-import MuralDePresidencia from './pages/MuralDePresidencia';
-import MuseoDeCasa from './pages/MuseoDeCasa';
-import ParqueInfantil from './pages/ParqueInfantil';
-import PlazaPrincipal from './pages/PlazaPrincipal';
-import Reloj from './pages/Reloj';
+import Notificaciones from './pages/Notificaciones';
 
-//Tierra de vinos
-import TierraDeVinos from "./pages/TierraDeVinos";
-import RutaReligiosa from "./pages/RutaReligiosa";
-import Notificaciones from "./pages/Notificaciones";
+// Páginas de navegación (¿Qué ver?)
+import CentroHistorico from './pages/quever/CentroHistorico';
+import TierraDeVinos from './pages/quever/TierraDeVinos';
+import RutaReligiosa from './pages/quever/RutaReligiosa';
 
+// Páginas del Centro Histórico
+import AntiguaEstacion from './pages/centrohistorico/AntiguaEstacion';
+import ArchivoHistorico from './pages/centrohistorico/ArchivoHistorico';
+import CasaDeMadera from './pages/centrohistorico/CasaDeMadera';
+import MonumentoALaVendimia from './pages/centrohistorico/MonumentoALaVendimia';
+import MuralDePresidencia from './pages/centrohistorico/MuralDePresidencia';
+import MuseoDeCasa from './pages/centrohistorico/MuseoDeCasa';
+import ParqueInfantil from './pages/centrohistorico/ParqueInfantil';
+import PlazaPrincipal from './pages/centrohistorico/PlazaPrincipal';
+import Reloj from './pages/centrohistorico/Reloj';
+
+// Estilos globales
 import './styles/globals.css';
 
 

@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
-import ImageCarousel from "../components/ImageCarousel";
-import LocationMap from "../components/LocationMap";
-import "../styles/DetailPage.css";
+import Header from "../../components/Header";
+import ImageCarousel from "../../components/ImageCarousel";
+import LocationMap from "../../components/LocationMap";
+import '../../styles/DetailPage.css';
 
 const MonumentoALaVendimia = () => {
 

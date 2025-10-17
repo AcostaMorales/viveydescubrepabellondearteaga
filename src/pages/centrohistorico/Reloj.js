@@ -1,8 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
-import LocationMap from "../components/LocationMap";
-import useScrollToTop from "../hooks/useScrollToTop";
-import "../styles/DetailPage.css";
+import Header from "../../components/Header";
+import LocationMap from "../../components/LocationMap";
+import useScrollToTop from "../../hooks/useScrollToTop";
+import '../../styles/DetailPage.css';
+
 
 const Reloj = () => {
   // Hook para hacer scroll al inicio al cargar la página

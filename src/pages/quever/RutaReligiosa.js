@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
-import NavigationCard from '../components/NavigationCard';
-import '../styles/NavigationPage.css';
+import Header from '../../components/Header';
+import NavigationCard from '../../components/NavigationCard';
+import '../../styles/NavigationPage.css';
 
 const RutaReligiosa = () => {
   const navigate = useNavigate();

@@ -1,10 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
-import NavigationCard from '../components/NavigationCard';
-import '../styles/NavigationPage.css';
+
+import Header from '../../components/Header';
+import NavigationCard from '../../components/NavigationCard';
+import useScrollToTop from '../../hooks/useScrollToTop';
+
+import '../../styles/NavigationPage.css';
 
 const CentroHistorico = () => {
+  // Hook para hacer scroll al inicio al cargar la página
+  useScrollToTop();
+  
   const navigate = useNavigate();
   
   const navigationItems = [
