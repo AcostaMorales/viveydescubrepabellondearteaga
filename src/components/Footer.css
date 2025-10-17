@@ -88,9 +88,9 @@
   }
   
   .footer-button {
-    min-height: 50px; /* Altura reducida en móviles */
+    min-height: 75px; /* Altura reducida en móviles */
     padding: 0.1rem;
-    max-width: 65px; /* Ancho reducido en móviles */
+    max-width: 75px; /* Ancho reducido en móviles */
   }
   
   /* Los iconos se ajustan automáticamente con clamp() */
@@ -122,8 +122,8 @@
   .footer-icon-directorio-comercial,
   .footer-icon-promociones,
   .footer-icon-notificaciones {
-    width: 16px !important; /* Iconos pequeños en pantallas extremas */
-    height: 16px !important;
+    width: 25px !important; /* Iconos pequeños en pantallas extremas */
+    height: 25px !important;
   }
   
   .footer-button {
