@@ -76,7 +76,8 @@
 /* Contenedor general de toda la sección de tarjetas de navegación */
 .navigation-section {
   margin-top: var(--spacing-xl); /* Espacio grande arriba - aumentar para más separación del video */
-  width: 100%; /* Ocupa todo el ancho disponible */
+  width: 100% + 12; /* Ocupa todo el ancho disponible */
+
 }
 
 /* Título "¿Qué te gustaría ver?" sobre las tarjetas */
