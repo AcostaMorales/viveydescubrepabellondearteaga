@@ -15,7 +15,7 @@
   --header-height: 80px;
   --header-image-height: 25vh;
   --total-header-height: var(--header-height); /* Se actualiza dinámicamente */
-  --footer-height: 90px;
+  --footer-height: 80px;
   
   /* Espaciado */
   --spacing-xs: 4px;

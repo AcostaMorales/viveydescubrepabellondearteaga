@@ -82,6 +82,7 @@
 
 /* Título "¿Qué te gustaría ver?" sobre las tarjetas */
 .section-title {
+  background-color: rgba(255, 253, 253, 0.678);
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--primary-color);
