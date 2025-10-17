@@ -82,12 +82,12 @@
 
 /* Título "¿Qué te gustaría ver?" sobre las tarjetas */
 .section-title {
-  font-size: 20px; /* Tamaño del título - cambiar para más/menos prominencia */
-  font-weight: 600; /* Semi-bold - cambiar entre 400-700 */
-  color: var(--gray-dark); /* Color gris oscuro - cambiar por cualquier color */
-  margin-bottom: var(--spacing-lg); /* Separación con las tarjetas - ajustar según necesidad */
-  text-align: center; /* Centrado horizontalmente */
-  background-color: rgba(255, 255, 255, 0.75); /* Fondo blanco semi-transparente - cambiar opacidad o quitar */
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  position: relative;/* Fondo blanco semi-transparente - cambiar opacidad o quitar */
 }
 
 /* =================================================================

@@ -73,7 +73,7 @@ const Home = () => {
 
       {/* Navigation Section */}
       <div className="navigation-section">
-        <h3 className="section-title">Explora Pabellón de Arteaga</h3>
+        <h2 className="section-title">Explora Pabellón de Arteaga</h2>
         <div className="navigation-grid">
           {navigationItems.map(item => (
             <NavigationCard
