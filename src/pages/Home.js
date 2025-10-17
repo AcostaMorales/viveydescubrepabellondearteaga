@@ -18,7 +18,8 @@ const Home = () => {
       id: 2,
       title: "Directorio Comercial",
       image: "/assents/imagenes/PaginaPrincipal/DirectorioComercial.png",
-      path: "/directorio"
+      externalUrl: "https://directorio.vivemexico.online",
+      openInNewTab: true
     },
     {
       id: 3,
@@ -79,8 +80,10 @@ const Home = () => {
             <NavigationCard
               key={item.id}
               image={item.image}
-              title={item.title}
-              onClick={() => handleNavigation(item.path)}
+              
+              onClick={item.path ? () => handleNavigation(item.path) : undefined}
+              externalUrl={item.externalUrl}
+              openInNewTab={item.openInNewTab}
             />
           ))}
         </div>
