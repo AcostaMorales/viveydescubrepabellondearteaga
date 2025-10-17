@@ -27,6 +27,7 @@ import Reloj from './pages/centrohistorico/Reloj';
 
 //Paginas de Tierra de Vinos
 import BodegasOrigen from './pages/tierradevino/BodegasOrigen';
+import HaciendaDeLetras from './pages/tierradevino/HaciendaDeLetras';
 
 // Estilos globales
 import './styles/globals.css';
@@ -74,6 +75,7 @@ function App() {
 
             {/* Rutas de las paginas de tierra de vinos */}
             <Route path="/quever/tierradevinos/bodegasorigen" element={<BodegasOrigen />}/>
+            <Route path="/quever/tierradevinos/haciendadeletras" element={<HaciendaDeLetras />}/>
 
             {/* Rutas para las páginas de Tierra de Vinos */}
             <Route path="/notificaciones" element={<Notificaciones />}/>
