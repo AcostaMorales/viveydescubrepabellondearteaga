@@ -67,7 +67,6 @@ const QueVer = () => {
             <NavigationCard
               key={item.id}
               image={item.image}
-              title={item.title}
               onClick={() => handleNavigation(item.path)}
             />
           ))}

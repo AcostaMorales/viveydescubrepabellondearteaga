@@ -25,6 +25,9 @@ import ParqueInfantil from './pages/centrohistorico/ParqueInfantil';
 import PlazaPrincipal from './pages/centrohistorico/PlazaPrincipal';
 import Reloj from './pages/centrohistorico/Reloj';
 
+//Paginas de Tierra de Vinos
+import BodegasOrigen from './pages/tierradevino/BodegasOrigen';
+
 // Estilos globales
 import './styles/globals.css';
 
@@ -68,6 +71,9 @@ function App() {
             <Route path="/quever/centrohistorico/parqueinfantil" element={<ParqueInfantil />}/>
             <Route path="/quever/centrohistorico/plazaprincipal" element={<PlazaPrincipal />}/>
             <Route path="/quever/centrohistorico/reloj" element={<Reloj />}/>
+
+            {/* Rutas de las paginas de tierra de vinos */}
+            <Route path="/quever/tierradevinos/bodegasorigen" element={<BodegasOrigen />}/>
 
             {/* Rutas para las páginas de Tierra de Vinos */}
             <Route path="/notificaciones" element={<Notificaciones />}/>
