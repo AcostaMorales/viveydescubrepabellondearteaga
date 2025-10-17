@@ -88,7 +88,7 @@ const RanchoUbuntu = () => {
             <LocationMap 
               latitude={22.101652}
               longitude={-102.340571}
-              placeName="Hacienda de Letras"
+              placeName="Rancho Ubuntu"
               address="Pabellon de Arteaga, Aguascalientes, México"
               description=""
               showDirections={true}

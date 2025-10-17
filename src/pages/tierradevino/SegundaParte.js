@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../../components/Header";
-import ImageCarousel from "../../components/ImageCarousel";
 import LocationMap from "../../components/LocationMap";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import '../../styles/DetailPage.css';
@@ -72,7 +71,7 @@ const SegundaParte = () => {
             <LocationMap 
               latitude={22.1377232}
               longitude={-102.2976833}
-              placeName="Hacienda Vinícola Real de Plata"
+              placeName="Vinos Segunda Parte"
               address="Pabellon de Arteaga, Aguascalientes, México"
               description=""
               showDirections={true}

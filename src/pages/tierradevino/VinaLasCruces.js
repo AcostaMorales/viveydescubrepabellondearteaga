@@ -64,8 +64,8 @@ const VinaLasCruces = () => {
 
             {/* Mapa y geolocalización */}
             <LocationMap 
-              latitude={22.1151435}
-              longitude={-102.2954818}
+              latitude={22.1149843}
+              longitude={-102.2927957}
               placeName="Viña Las Cruces"
               address="Pabellon de Arteaga, Aguascalientes, México"
               description=""
