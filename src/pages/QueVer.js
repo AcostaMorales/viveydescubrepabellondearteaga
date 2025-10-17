@@ -37,6 +37,12 @@ const QueVer = () => {
         title: "Ruta Religiosa",
         image: "/assents/imagenes/PaginaQueVer/RutaReligiosa.png",
         path: "/quever/rutareligiosa"
+    },
+    {
+      id: 6,
+      title: "Ferias y Festividades",
+      image: "/assents/imagenes/PaginaQueVer/FeriasYFestividades.png",
+      path: "/quever/feriasyfestividades"
     }
   ];
 
@@ -48,14 +54,10 @@ const QueVer = () => {
     <div className="navigation-page green">
       {/* Header sin imagen para la página QueVer */}
       <Header 
-        showHeaderImage={false}
-        hasNotifications={true}
+        headerImage="/assents/imagenes/PaginaQueVer/Encabezado.png"
+        headerAlt="Tierra de Vinos"
+        showHeaderImage={true}
       />
-      
-      {/* Header Section */}
-      <div className="navigation-header">
-        <h1 className="navigation-title">¿Qué Ver?</h1>
-      </div>
       
       {/* Navigation Section */}
       <div className="navigation-content">

@@ -24,8 +24,7 @@
 .navigation-section-title {
   font-size: 1.8rem;
   font-weight: 600;
-  color: #050001;
-  margin-top: var(--spacing-lg); /* Separación del header */
+  color: var(--primary-color);
   margin-bottom: var(--spacing-xl);
   text-align: center;
   position: relative;
@@ -39,7 +38,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #722f37, #8b4a5e, #a366a3);
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
   border-radius: 2px;
 }
 
@@ -53,10 +52,10 @@
 
 /* Tarjetas especiales para navegación */
 .navigation-card {
-  background: var(--white);
+  
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow); /* Sombra por defecto */
+   /* Sombra por defecto */
   transition: all var(--transition);
   cursor: pointer;
   position: relative;

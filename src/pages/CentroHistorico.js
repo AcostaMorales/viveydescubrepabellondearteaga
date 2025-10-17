@@ -72,16 +72,10 @@ const CentroHistorico = () => {
     <div className="navigation-page blue">
       {/* Header sin imagen para la página Centro Histórico */}
       <Header 
-        showHeaderImage={false}
-        hasNotifications={true}
+        headerImage="/assents/imagenes/CentroHistorico/Encabezado.png"
+        headerAlt="Centro Histórico"
+        showHeaderImage={true}
       />
-      
-      {/* Header Section */}
-      <div className="navigation-header">
-        <h1 className="navigation-title">Centro Histórico</h1>
-      </div>
-
-
       {/* Navigation Section */}
       <div className="navigation-content">
         <h3 className="navigation-section-title">Lugares para Visitar</h3>
