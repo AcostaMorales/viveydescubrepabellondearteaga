@@ -84,8 +84,8 @@ const RanchoUbuntu = () => {
 
             {/* Mapa y geolocalización */}
             <LocationMap 
-              latitude={22.1377232}
-              longitude={-102.2976833}
+              latitude={22.1377566}
+              longitude={-102.2951192}
               placeName="Hacienda Vinícola Real de Plata"
               address="Pabellon de Arteaga, Aguascalientes, México"
               description=""
