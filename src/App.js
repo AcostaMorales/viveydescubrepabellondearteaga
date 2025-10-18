@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Componentes
 import Footer from './components/Footer';
+import PWAInstallPrompt from './components/PWAInstallPrompt';
 
 // Páginas principales
 import Home from './pages/Home';
@@ -110,6 +111,9 @@ function App() {
         </main>
         
         <Footer />
+        
+        {/* PWA Install Prompt */}
+        <PWAInstallPrompt />
       </div>
     </Router>
   );
