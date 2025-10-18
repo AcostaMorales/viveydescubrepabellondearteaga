@@ -39,6 +39,7 @@ import VinicolaSantaElena from './pages/tierradevino/VinicolaSantaElena';
 //Paginas de Ruta Religiosa
 import InmaculadaConcepcion from './pages/rutareligiosa/InmaculadaConcepcion';
 import ParroquiaDeGuadalupe from './pages/rutareligiosa/ParroquiaDeGuadalupe';
+import TemploDelSagradoCorazon from './pages/rutareligiosa/TemploDelSagradoCorazon';
 
 // Estilos globales
 import './styles/globals.css';
@@ -98,6 +99,7 @@ function App() {
             {/* Rutas de las paginas de ruta religiosa */}
             <Route path="/quever/rutareligiosa/capilladelainmaculadaconcepcion" element={<InmaculadaConcepcion />}/>
             <Route path="/quever/rutareligiosa/parroquiadeguadalupe" element={<ParroquiaDeGuadalupe />}/>
+            <Route path="/quever/rutareligiosa/templodelsagradocorazon" element={<TemploDelSagradoCorazon />}/>
 
             {/* Rutas para las páginas de Tierra de Vinos */}
             <Route path="/notificaciones" element={<Notificaciones />}/>
