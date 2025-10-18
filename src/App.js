@@ -36,6 +36,9 @@ import VinicolaElAguaje from './pages/tierradevino/VinicolaElAguaje';
 import VinicolaElSarmiento from './pages/tierradevino/VinicolaElSarmiento';
 import VinicolaSantaElena from './pages/tierradevino/VinicolaSantaElena';
 
+//Paginas de Ruta Religiosa
+import InmaculadaConcepcion from './pages/rutareligiosa/InmaculadaConcepcion';
+
 // Estilos globales
 import './styles/globals.css';
 
@@ -90,6 +93,9 @@ function App() {
             <Route path="/quever/tierradevinos/vinicolaelaguaje" element={<VinicolaElAguaje />}/>
             <Route path="/quever/tierradevinos/vinicolaelsarmiento" element={<VinicolaElSarmiento />}/>
             <Route path="/quever/tierradevinos/vinicolasantaelena" element={<VinicolaSantaElena />}/>
+
+            {/* Rutas de las paginas de ruta religiosa */}
+            <Route path="/quever/rutareligiosa/capilladelainmaculadaconcepcion" element={<InmaculadaConcepcion />}/>
 
             {/* Rutas para las páginas de Tierra de Vinos */}
             <Route path="/notificaciones" element={<Notificaciones />}/>

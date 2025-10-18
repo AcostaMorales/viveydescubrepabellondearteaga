@@ -6,6 +6,7 @@ import '../../styles/NavigationPage.css';
 
 const RutaReligiosa = () => {
   const navigate = useNavigate();
+   const rutaImagenesBase = "https://raw.githubusercontent.com/AcostaMorales/AlmacenDeImagenes/main/";
   
   const navigationItems = [
     {
@@ -42,14 +43,12 @@ const RutaReligiosa = () => {
     <div className="navigation-page orange">
       {/* Header sin imagen para la página Ruta Religiosa */}
       <Header 
-        showHeaderImage={false}
-        hasNotifications={true}
+        headerImage={rutaImagenesBase + "ImagenesRepertorio/Paginas/RutaReligiosa/Encabezado.png"}
+        headerAlt="Ruta Religiosa"
+        showHeaderImage={true}
+        hasNotifications={false}
       />
       
-      {/* Header Section */}
-      <div className="navigation-header">
-        <h1 className="navigation-title">Ruta Religiosa</h1>
-      </div>
       
       {/* Navigation Section */}
       <div className="navigation-content">
