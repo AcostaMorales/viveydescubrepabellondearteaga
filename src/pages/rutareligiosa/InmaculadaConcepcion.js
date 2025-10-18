@@ -108,8 +108,8 @@ const InmaculadaConcepcion = () => {
 
             {/* Mapa y geolocalización */}
             <LocationMap 
-              latitude={22.1373952}
-              longitude={-102.295062}
+              latitude={22.1401396}
+              longitude={-102.3226555}
               placeName="Templo de la Inmaculada Concepción"
               address="Pabellón de Arteaga, Aguascalientes, México"
               description="Iglesia parroquial de gran importancia espiritual y arquitectónica para la comunidad de Pabellón de Arteaga"
