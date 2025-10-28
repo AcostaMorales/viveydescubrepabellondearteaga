@@ -4,15 +4,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Componentes
 import Footer from './components/Footer';
 
+
 // Páginas principales
 import Home from './pages/Home';
 import QueVer from './pages/QueVer';
-import Notificaciones from './pages/Notificaciones';
 
 // Páginas de navegación (¿Qué ver?)
 import CentroHistorico from './pages/quever/CentroHistorico';
 import TierraDeVinos from './pages/quever/TierraDeVinos';
 import RutaReligiosa from './pages/quever/RutaReligiosa';
+import FeriasYFestividades from './pages/quever/FeriasYFestividades';
 
 // Páginas del Centro Histórico
 import AntiguaEstacion from './pages/centrohistorico/AntiguaEstacion';
@@ -55,7 +56,7 @@ function App() {
      >        
         <main className="main-content"
          style= {{
-          backgroundImage: "url('/assents/imagenes/FondoPagina/FondoPagina.png')",
+          backgroundImage: 'url("/assents/imagenes/FondoPagina/FondoPaginaAc.svg")',
           backgroundRepeat: "repeat",
           backgroundPosition: "center",
           backgroundSize: "100% auto",
@@ -74,6 +75,7 @@ function App() {
             <Route path="/quever/centrohistorico" element={<CentroHistorico />}/>
             <Route path="/quever/tierradevinos" element={<TierraDeVinos />}/>
             <Route path="/quever/rutareligiosa" element={<RutaReligiosa />}/>
+            <Route path="/quever/feriasyfestividades" element={<FeriasYFestividades />}/>
 
             {/* Rutas para las páginas del Centro Histórico */}
             <Route path="/quever/centrohistorico/antiguaestacion" element={<AntiguaEstacion />}/>
@@ -103,13 +105,13 @@ function App() {
             <Route path="/quever/rutareligiosa/templodelsagradocorazon" element={<TemploDelSagradoCorazon />}/>
             <Route path="/quever/rutareligiosa/templodenuestrasenoradelrefugio" element={<TemploDeNtraSenoraDelRefugio />}/>
 
-            {/* Rutas para las páginas de Tierra de Vinos */}
-            <Route path="/notificaciones" element={<Notificaciones />}/>
+            
             {/* Aquí agregaremos más rutas */}
           </Routes>
         </main>
         
         <Footer />
+        
       </div>
     </Router>
   );
