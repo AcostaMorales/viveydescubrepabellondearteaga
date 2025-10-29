@@ -86,8 +86,8 @@ const RanchoUbuntu = () => {
 
             {/* Mapa y geolocalización */}
             <LocationMap 
-              latitude={22.0796457173}
-              longitude={-102.32695773244}
+              latitude={22.079832}
+              longitude={-102.326357}
               placeName="Vinícola El Sarmiento"
               address="Pabellon de Arteaga, Aguascalientes, México"
               description=""
