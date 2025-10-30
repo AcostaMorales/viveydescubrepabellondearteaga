@@ -1,8 +1,8 @@
 // routes/assetRoutes.js
 import { Router } from 'express';
 import multer from 'multer';
-import { uploadToFolder, deleteByPublicId } from '../services/cloudinaryService.js';
-import Asset from '../models/Asset.js';
+import { uploadToFolder, deleteByPublicId } from '../services/cloudinaryServices.js';
+import Asset from '../models/Assets.js';
 
 const router = Router();
 const upload = multer({ dest: 'uploads/' });

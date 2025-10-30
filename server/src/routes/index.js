@@ -18,7 +18,7 @@ router.use('/assets', assetRoutes);
 router.use('/notifications', notificationRoutes);
 
 //Rutas de tarjetas de navegación
-router.use('/navigation-cards', navigationCard);
+router.use('/navigation-card', navigationCard);
 
 //Rutas de contenidos de páginas
 router.use('/page-contents', pageContentRoutes);

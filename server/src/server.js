@@ -9,7 +9,7 @@ import './config/webpush.js';
 dotenv.config();
 await connectDB();
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
