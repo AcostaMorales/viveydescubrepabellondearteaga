@@ -1,0 +1,164 @@
+/* =================================================================
+   CONTENEDOR PRINCIPAL DE LA PÁGINA HOME
+   ================================================================= */
+/* Define el contenedor principal de toda la página de inicio */
+.home-page {
+  padding: 12px; /* Espaciado interno - cambiar para más/menos margen */
+  min-height: calc(100vh - var(--header-height) - var(--footer-height)); /* Altura mínima = pantalla completa menos header y footer */
+  position: relative; /* Posicionamiento relativo para elementos hijos */
+  width: 100%; /* Ancho completo disponible */
+}
+
+/* =================================================================
+   SECCIÓN HERO (ENCABEZADO PRINCIPAL)
+   ================================================================= */
+/* Contiene el título principal y subtítulo de la página */
+.hero-section {
+  text-align: center; /* Centra todo el contenido horizontalmente */
+  margin-bottom: var(--spacing-xl); /* Espacio grande debajo - cambiar para separar más/menos del video */
+  margin-left: 19px; /* Margen izquierdo fijo - ajustar para centrar o mover */
+  margin-right: 22px; /* Margen derecho fijo - ajustar para centrar o mover */
+}
+
+/* Título principal "Vive y Descubre" */
+.main-title {
+  font-size: 28px; /* Tamaño de fuente - aumentar para título más grande */
+  font-weight: 700; /* Grosor bold - cambiar entre 300-900 */
+  color: var(--primary-color); /* Color principal del tema */
+  margin-bottom: var(--spacing-xs); /* Separación pequeña con subtítulo */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil - quitar para texto plano */
+}
+
+/* Subtítulo debajo del título principal */
+.subtitle {
+  font-size: 22px; /* Tamaño menor que título - ajustar proporcionalmente */
+  font-weight: 400; /* Peso normal - cambiar a 300 para más ligero o 500 para más bold */
+  color: var(--gray-dark); /* Color gris oscuro - cambiar por cualquier color */
+  margin-bottom: var(--spacing-lg); /* Separación con el video - aumentar para más espacio */
+}
+
+/* =================================================================
+   CONTENEDOR DE VIDEO PRINCIPAL
+   ================================================================= */
+/* Contenedor que controla el ancho y posición del video */
+.video-container {
+  margin-bottom: var(--spacing-lg); /* Espacio debajo del video - cambiar para más/menos separación */
+  border-radius: 0; /* Sin esquinas redondeadas - cambiar a 8px o 16px para esquinas curvas */
+  overflow: hidden; /* Oculta partes del video que sobresalgan */
+  
+  /* CONTROLES DE ANCHO DEL VIDEO */
+  margin-left: 20px; /* Margen izquierdo fijo - reducir para video más ancho */
+  margin-right: 20px; /* Margen derecho fijo - reducir para video más ancho */
+  width: calc(100% + 0 * var(--spacing-md)); /* Ancho calculado - cambiar el "0" por número negativo para expandir */
+}
+
+/* Elemento que contiene el video real */
+.video-placeholder {
+  width: 100%; /* Siempre ocupa todo el ancho del contenedor */
+  height: 350px; /* Altura fija del video - cambiar para video más alto/bajo */
+  display: block; /* Evita espacios extra - mantener como está */
+  position: relative; /* Para posicionamiento de elementos sobre el video */
+  background: transparent; /* Sin color de fondo - cambiar a un color si quieres fondo */
+}
+
+/* El elemento video HTML5 */
+.video-placeholder video {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 100%; /* Ocupa toda la altura disponible */
+  object-fit: cover; /* Recorta video para llenar espacio - cambiar a 'contain' para ver video completo */
+  display: block; /* Evita espacios extra */
+  border-radius: 0; /* Sin esquinas redondeadas en el video mismo */
+}
+
+/* =================================================================
+   SECCIÓN DE NAVEGACIÓN (NAVIGATIONCARDS)
+   ================================================================= */
+/* Contenedor general de toda la sección de tarjetas de navegación */
+.navigation-section {
+  margin-top: var(--spacing-xl); /* Espacio grande arriba - aumentar para más separación del video */
+  width: 100% + 12; /* Ocupa todo el ancho disponible */
+
+}
+
+/* Título "¿Qué te gustaría ver?" sobre las tarjetas */
+.section-title {
+  background-color: rgba(255, 253, 253, 0.678);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  position: relative;/* Fondo blanco semi-transparente - cambiar opacidad o quitar */
+}
+
+/* =================================================================
+   GRID DE TARJETAS DE NAVEGACIÓN
+   ================================================================= */
+/* Contenedor que organiza las NavigationCards en columna */
+.navigation-grid {
+  width: 100%; /* ANCHO DE LAS TARJETAS - cambiar para hacer más/menos anchas */
+  display: flex; /* Layout flexbox */
+  flex-direction: column; /* Tarjetas apiladas verticalmente - cambiar a 'row' para horizontal */
+  gap: var(--spacing-md); /* ESPACIO ENTRE TARJETAS - aumentar para más separación */
+  padding: 0; /* MÁRGENES LATERALES - aumentar para tarjetas más estrechas */
+  margin: 0; /* Sin márgenes externos - cambiar para centrar o mover */
+  margin-left: 0px; /* Margen izquierdo fijo - ajustar para centrar o mover */
+  margin-right: 0px; /* Margen derecho fijo - ajustar para centrar o mover */
+}
+
+/* =================================================================
+   DISEÑO RESPONSIVE (ADAPTACIÓN A DIFERENTES PANTALLAS)
+   ================================================================= */
+
+/* TABLETS (pantallas medianas de 768px o menos) */
+@media (max-width: 768px) {
+  /* Ajustes para tablets - expandir video más que en desktop */
+  .video-container {
+    margin-left: calc(-1.5 * var(--spacing-md)); /* Expande hacia la izquierda */
+    margin-right: calc(-1.5 * var(--spacing-md)); /* Expande hacia la derecha */
+    width: calc(100% + 3 * var(--spacing-md)); /* Ancho total expandido */
+    /* MODIFICAR: Cambiar los multiplicadores (-1.5 y +3) para más/menos expansión */
+  }
+  
+  .video-placeholder {
+    height: 280px; /* Altura reducida para tablets - ajustar según necesidad */
+  }
+}
+
+/* MÓVILES (pantallas pequeñas de 480px o menos) */
+@media (max-width: 480px) {
+  /* Máxima expansión en móviles para aprovechar espacio */
+  .video-container {
+    margin-left: calc(-2 * var(--spacing-md)); /* Mayor expansión izquierda */
+    margin-right: calc(-2 * var(--spacing-md)); /* Mayor expansión derecha */
+    width: calc(100% + 4 * var(--spacing-md)); /* Máximo ancho posible */
+    /* MODIFICAR: Cambiar multiplicadores para ajustar expansión en móviles */
+  }
+  
+  .video-placeholder {
+    height: 250px; /* Altura más pequeña para móviles */
+  }
+}
+
+/* MÓVILES MUY PEQUEÑOS (400px o menos) */
+@media (max-width: 400px) {
+  /* Ajustes para pantallas muy pequeñas */
+  .video-container {
+    margin-left: calc(-2 * var(--spacing-md)); /* Mantiene máxima expansión */
+    margin-right: calc(-2 * var(--spacing-md));
+    width: calc(100% + 4 * var(--spacing-md));
+  }
+  
+  /* TEXTOS MÁS PEQUEÑOS para pantallas diminutas */
+  .main-title {
+    font-size: 24px; /* Título más pequeño - ajustar según legibilidad */
+  }
+  
+  .subtitle {
+    font-size: 18px; /* Subtítulo más pequeño - ajustar proporcionalmente */
+  }
+  
+  .video-placeholder {
+    height: 220px; /* Video más bajo para ahorrar espacio vertical */
+  }
+}

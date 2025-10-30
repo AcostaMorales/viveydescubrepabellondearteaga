@@ -1,0 +1,142 @@
+/* Footer fijo */
+.footer {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  height: var(--footer-height);
+  border-top: 1px solid var(--gray-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  z-index: 1000;
+ 
+}
+
+/* Botones del footer */
+.footer-button {
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all var(--transition);
+  flex: 1; /* Cada botón toma espacio igual */
+  min-width: 0; /* Permite que se comprima */
+  max-width: 70px; /* Tamaño máximo reducido para mejor ajuste */
+  min-height: 55px; /* Altura reducida */
+}
+
+.footer-button:hover {
+  background-color: var(--gray-light);
+  transform: translateY(-2px);
+}
+
+.footer-buttons-container {
+  background-color: white;
+  display: flex;
+  justify-content: space-around; /* Distribución original */
+  align-items: center;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 0 var(--spacing-sm); /* Padding reducido para menos espacio entre botones */
+  gap: 2px; /* Espacio mínimo entre botones */
+}
+
+.footer-icon {
+  font-size: 1.5rem; /* Tamaño relativo */
+  margin-bottom: 0.25rem;
+}
+
+/* Iconos de imagen - tamaños dinámicos basados en el viewport */
+.footer-icon-home,
+.footer-icon-aguscalientes,
+.footer-icon-mapa,
+.footer-icon-directorio-comercial,
+.footer-icon-promociones,
+.footer-icon-notificaciones {
+  width: clamp(35px, 4vw, 32px); /* Tamaño más grande: mín 20px, máx 32px, 4% del viewport */
+  height: clamp(35px, 4vw, 32px);
+  margin-bottom: 0.15rem; /* Margen reducido */
+  object-fit: contain; /* Cambiado a contain para mejor calidad */
+}
+
+.footer-text {
+  font-size: clamp(7px, 1.8vw, 10px); /* Texto más pequeño: mín 7px, máx 10px, 1.8% del viewport */
+  color: var(--gray-medium);
+  font-weight: 500;
+  color: blue;
+  text-align: center;
+  line-height: 1.1;
+  white-space: nowrap; /* Evita salto de línea */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agrega ... si es muy largo */
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .footer-buttons-container {
+    padding: 0 4px; /* Padding muy reducido en móviles */
+    gap: 1px; /* Espacio mínimo */
+  }
+  
+  .footer-button {
+    min-height: 75px; /* Altura reducida en móviles */
+    padding: 0.1rem;
+    max-width: 75px; /* Ancho reducido en móviles */
+  }
+  
+  /* Los iconos se ajustan automáticamente con clamp() */
+}
+
+@media (max-width: 360px) {
+  /* Dispositivos muy pequeños */
+  .footer-button {
+    min-height: 45px; /* Altura muy reducida */
+    padding: 0.05rem;
+    max-width: 60px; /* Ancho muy reducido */
+  }
+  
+  .footer-buttons-container {
+    padding: 0 2px;
+    gap: 0;
+  }
+}
+
+@media (max-width: 280px) {
+  /* Dispositivos extremadamente pequeños */
+  .footer-text {
+    font-size: 6px !important; /* Texto muy pequeño */
+  }
+  
+  .footer-icon-home,
+  .footer-icon-aguscalientes,
+  .footer-icon-mapa,
+  .footer-icon-directorio-comercial,
+  .footer-icon-promociones,
+  .footer-icon-notificaciones {
+    width: 25px !important; /* Iconos pequeños en pantallas extremas */
+    height: 25px !important;
+  }
+  
+  .footer-button {
+    max-width: 55px; /* Botones muy compactos */
+    min-height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Tablets y pantallas más grandes mantienen tamaño máximo */
+  .footer-buttons-container {
+    max-width: 600px;
+    margin: 0 auto;
+    gap: var(--spacing-sm);
+  }
+}
