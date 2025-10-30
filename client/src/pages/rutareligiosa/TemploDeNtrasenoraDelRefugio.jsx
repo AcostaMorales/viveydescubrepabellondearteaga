@@ -5,6 +5,7 @@ import LocationMap from "../../components/LocationMap.jsx";
 import useScrollToTop from "../../hooks/useScrollToTop.jsx";
 import '../../styles/DetailPage.css';
 
+
 const TemploDeNtraSenoraDelRefugio = () => {
   useScrollToTop();
   const rutaImagenesBase = "https://raw.githubusercontent.com/AcostaMorales/AlmacenDeImagenes/main/";
