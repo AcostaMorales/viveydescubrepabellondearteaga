@@ -63,13 +63,6 @@ function App() {
           <ScrollToTop targetSelector=".app-content" smooth /> */}
       <ScrollToTop smooth />
       {/* 1) Auto-installer: escucha ?autoinstall=true y dispara el prompt */}
-      <AutoInstaller />
-
-      {/* 2) Botón de instalar PWA: se oculta solo si ya está instalada o estás dentro de la PWA */}
-      <InstallPWAButton />
-
-      {/* 3) Botón de notificaciones: se oculta solo cuando ya te suscribes */}
-      <NotificationPermissionButton />
 
 
       <div className="app-layout">
