@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-const InstallPWAButton = () => {
+const InstallPWAButton = ({ inline = false, className = '', onInstalled }) => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [isInstalled, setIsInstalled] = useState(false);
   const [isInPWA, setIsInPWA] = useState(false);
@@ -26,6 +26,7 @@ const InstallPWAButton = () => {
 
     const handleAppInstalled = () => {
       setIsInstalled(true);
+      if (typeof onInstalled === 'function') onInstalled();
       setDeferredPrompt(null);
     };
 
@@ -62,6 +63,7 @@ const InstallPWAButton = () => {
         const { outcome } = await deferredPrompt.userChoice;
         if (outcome === 'accepted') {
           setIsInstalled(true);
+      if (typeof onInstalled === 'function') onInstalled();
         } else {
           showManualInstructions(isIOS);
         }
@@ -92,6 +94,22 @@ const InstallPWAButton = () => {
   // 🔒 Ocultar si está dentro de la PWA o ya instalada
   if (isInPWA || isInstalled) return null;
 
+  
+  // 🔒 Ocultar si está dentro de la PWA o ya instalada
+  if (isInPWA || isInstalled) return null;
+
+  const ButtonEl = (
+    <button
+      onClick={handleInstallClick}
+      className={className || "install-pwa-button footer-tool-btn"}
+      title="Instalar aplicación"
+    >
+      <span className="emoji" aria-hidden>📲</span> Instalar App
+    </button>
+  );
+
+  if (inline) return ButtonEl;
+
   return (
     <div
       style={{
@@ -101,21 +119,7 @@ const InstallPWAButton = () => {
         zIndex: 1000,
       }}
     >
-      <button
-        onClick={handleInstallClick}
-        className="install-pwa-button auto-install"
-        title="Instalar aplicación"
-        style={{
-          padding: '12px 18px',
-          borderRadius: 24,
-          border: 'none',
-          fontWeight: 700,
-          boxShadow: '0 6px 18px rgba(0,0,0,.2)',
-          cursor: 'pointer',
-        }}
-      >
-        📲 Instalar App
-      </button>
+      {ButtonEl}
     </div>
   );
 };

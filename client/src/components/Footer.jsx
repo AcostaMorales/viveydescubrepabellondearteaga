@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Footer.css';
+import InstallPWAButton from './InstallPWAButton';
+import NotificationButton from './NotificationButton';
 import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
@@ -8,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="footer"
+      className="footer footer-has-tools"
       style={{
         backgroundImage: 'url(/assents/imagenes/Fondopagina/FondoPiePagina.svg)',
       }}
@@ -73,6 +75,7 @@ const Footer = () => {
         <FaYoutube />
       </button>
 
+      
       <div className="footer-buttons-container">
         <button
           className="footer-button"
@@ -133,6 +136,22 @@ const Footer = () => {
           />
           <span className="footer-text">Promociones</span>
         </button>
+      </div>
+    
+      {/* Floating left: Install PWA */}
+      <div
+        className="floating-left-wrapper"
+        style={{ bottom: '100px' }}
+      >
+        <InstallPWAButton inline className="floating-left-btn floating-left-install" />
+      </div>
+
+      {/* Floating left: Notifications */}
+      <div
+        className="floating-left-wrapper"
+        style={{ bottom: '160px' }}
+      >
+        <NotificationButton inline className="floating-left-btn floating-left-notif" />
       </div>
     </footer>
   );

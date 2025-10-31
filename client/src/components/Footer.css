@@ -140,3 +140,83 @@
     gap: var(--spacing-sm);
   }
 }
+/* === Herramientas lado izquierdo dentro del footer === */
+.footer.footer-has-tools { position: fixed; }
+.footer-left-tools {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  transform: translateY(-20%);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 1001;
+}
+
+.footer-tool-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid var(--gray-light);
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  cursor: pointer;
+  transition: transform var(--transition), background-color var(--transition);
+  white-space: nowrap;
+}
+
+.footer-tool-btn:hover { background: var(--gray-light); transform: translateY(-1px); }
+.footer-tool-btn .emoji { margin-right: 6px; }
+
+/* da espacio a los botones del centro cuando existen herramientas a la izquierda */
+.footer-has-tools .footer-buttons-container {
+  padding-left: 120px;
+}
+
+/* Responsive: compacta herramientas en móviles angostos */
+@media (max-width: 360px) {
+  .footer-left-tools { left: 4px; gap: 6px; }
+  .footer-tool-btn { padding: 6px 8px; font-size: 11px; }
+  .footer-has-tools .footer-buttons-container { padding-left: 100px; }
+}
+
+
+/* === Floating left action buttons (PWA install & Notifications) === */
+.floating-left-wrapper {
+  position: absolute;
+  left: 5px;
+  z-index: 1001;
+}
+.floating-left-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  font-size: 0; /* ocultar texto interno si lo hubiera */
+  padding: 0;
+}
+.floating-left-btn .emoji {
+  font-size: 22px; /* mostrar emoji/icono grande */
+  margin: 0;
+}
+.floating-left-install {
+  background-color: #0EA5E9; /* azul cyan */
+}
+.floating-left-notif {
+  background-color: #F59E0B; /* amber */
+}
+/* Si el botón no trae emoji adentro, dibujamos uno */
+.floating-left-notif::after {
+  content: '🔔';
+  font-size: 22px;
+}
