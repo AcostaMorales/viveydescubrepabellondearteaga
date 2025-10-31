@@ -46,7 +46,6 @@ import TemploDeNtraSenoraDelRefugio from './pages/rutareligiosa/TemploDeNtraSeno
 import DiaDeMuertos from './pages/feriasyfestividades/DiaDeMuertos.jsx';
 
 // ScrollToTop
-import ScrollToTop from './hooks/ScrollToTop.jsx';
 import AutoInstaller from './components/AutoInstaller.jsx';
 import InstallPWAButton from './components/InstallPWAButton.jsx';
 import NotificationPermissionButton from './components/NotificationPermissionButton.jsx';
@@ -60,7 +59,7 @@ function App() {
       {/* Auto-scroll al cambiar de ruta (window scroll).
           Si usas un contenedor scrollable, pasa targetSelector.
           <ScrollToTop targetSelector=".app-content" smooth /> */}
-      <ScrollToTop smooth />
+      
       {/* 1) Auto-installer: escucha ?autoinstall=true y dispara el prompt */}
       <AutoInstaller />
 
