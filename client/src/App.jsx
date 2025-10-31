@@ -51,6 +51,7 @@ import AutoInstaller from './components/AutoInstaller.jsx';
 import InstallPWAButton from './components/InstallPWAButton.jsx';
 import NotificationPermissionButton from './components/NotificationPermissionButton.jsx';
 
+
 // Estilos globales
 import './styles/globals.css';
 
