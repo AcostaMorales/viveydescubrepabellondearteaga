@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="footer footer-has-tools"
+      className="footer"
       style={{
         backgroundImage: 'url(/assents/imagenes/Fondopagina/FondoPiePagina.svg)',
       }}
@@ -75,7 +75,7 @@ const Footer = () => {
         <FaYoutube />
       </button>
 
-      
+       
       <div className="footer-buttons-container">
         <button
           className="footer-button"
@@ -137,8 +137,7 @@ const Footer = () => {
           <span className="footer-text">Promociones</span>
         </button>
       </div>
-    
-      {/* Floating left: Install PWA */}
+         {/* Floating left: Install PWA */}
       <div
         className="floating-left-wrapper"
         style={{ bottom: '100px' }}
@@ -153,6 +152,7 @@ const Footer = () => {
       >
         <NotificationButton inline className="floating-left-btn floating-left-notif" />
       </div>
+     
     </footer>
   );
 };

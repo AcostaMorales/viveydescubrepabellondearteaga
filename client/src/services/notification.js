@@ -61,7 +61,7 @@ export const subscribeToPushNotifications = async () => {
         const deviceId = generateDeviceId();
 
         // Enviar suscripción al servidor
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/notifications/subscribe`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/notifications/subscribe`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ export const unsubscribeFromPushNotifications = async () => {
 
         const deviceId = localStorage.getItem('deviceId');
         if (deviceId) {
-            await fetch(`${import.meta.env.VITE_API_URL}/api/notifications/unsubscribe/${deviceId}`, {
+            await fetch(`${import.meta.env.VITE_API_URL}/notifications/unsubscribe/${deviceId}`, {
                 method: 'DELETE'
             });
             localStorage.removeItem('deviceId');
