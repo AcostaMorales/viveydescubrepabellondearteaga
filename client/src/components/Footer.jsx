@@ -30,7 +30,7 @@ const Footer = () => {
           boxShadow: '0 2px 5px rgba(0,0,0,0.3)',
           cursor: 'pointer',
         }}
-        onClick={() => window.open('https://facebook.com', '_blank')}
+        onClick={() => window.open('https://www.facebook.com/share/1B28S8HaGE/?mibextid=wwXIfr', '_blank')}
       >
         <FaFacebookF />
       </button>
@@ -50,7 +50,7 @@ const Footer = () => {
           boxShadow: '0 2px 5px rgba(0,0,0,0.3)',
           cursor: 'pointer',
         }}
-        onClick={() => window.open('https://instagram.com', '_blank')}
+        onClick={() => window.open('https://www.instagram.com/pabellon.gob?igsh=MW8wampiMHl5cHhwZw==', '_blank')}
       >
         <FaInstagram />
       </button>
@@ -70,7 +70,7 @@ const Footer = () => {
           boxShadow: '0 2px 5px rgba(0,0,0,0.3)',
           cursor: 'pointer',
         }}
-        onClick={() => window.open('https://youtube.com', '_blank')}
+        onClick={() => window.open('https://youtube.com/@pabellondearteaga-ch?si=aF1GOa_Q3KwHDpqk', '_blank')}
       >
         <FaYoutube />
       </button>
