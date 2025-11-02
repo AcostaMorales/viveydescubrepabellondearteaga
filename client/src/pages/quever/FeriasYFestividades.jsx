@@ -33,12 +33,15 @@ const FeriasYFestividades = () => {
 
   return (
     <div className="navigation-page blue">
-      <Header
-        headerImage={rutaImagenesBase + 'ImagenesRepertorio/Paginas/FeriasYFestividades/Encabezado.png'}
-        headerAlt="Ferias y Festividades"
-        showHeaderImage={true}
-      />
+      <Header />
       <div className="navigation-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762054925/Encabezado_1_wvt13c.png"
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <h3 className="navigation-section-title">Conoce nuestra feria y festividades</h3>
         <div className="navigation-grid">
           {navigationItems.map((item) => (

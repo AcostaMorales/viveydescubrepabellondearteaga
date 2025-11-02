@@ -33,15 +33,20 @@ const VinicolaSantaElena = () => {
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/VinicolaSantaElena/Carrusel/VinicolaSantaElenaC2.jpg", alt: alt1 },
   ];
 
+  const rutaencabezado ="https://res.cloudinary.com/dbebikryr/image/upload/v1762061348/Encabezado_urjjdc.png"
+
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/VinicolaSantaElena/Encabezado.png"}
-        headerAlt="Vinícola Santa Elena"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Vinícola Santa Elena - Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">{parrafo1}</p>

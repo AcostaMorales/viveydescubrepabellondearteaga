@@ -18,15 +18,18 @@ const MuralDePresidencia = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage="/assents/imagenes/MuralDePresidencia/Encabezado.png"
-        headerAlt="Archivo Histórico Municipal"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762056004/Encabezado_ahttqh.png"
+            alt= "Mural de la Presidenc"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
-                <h1 className="detail-main-title">Monumento a la Vendimia - Pabellon de Arteaga</h1>
+                <h1 className="detail-main-title">Mural de la Presidencia Municipal - Pabellon de Arteaga</h1>
                 <p className="detail-paragraph">El Mural de la Presidencia Municipal es una de las obras plásticas más representativas de Pabellón de Arteaga, ya que narra visualmente la historia, identidad y transformación del municipio. Se encuentra en el interior del edificio de la Presidencia Municipal y está visible para visitantes, turistas y ciudadanos que acuden al recinto.</p>
                 <p className="detail-paragraph">La obra, de gran formato, integra escenas históricas, elementos naturales, personajes locales y símbolos culturales, componiendo una narrativa visual que conecta el pasado, el presente y las aspiraciones futuras de la comunidad.</p>
             </div>

@@ -37,15 +37,19 @@ const VinicolaElAguaje = () => {
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/VinicolaElAguaje/Carrusel/VinicolaElAguajeC3.jpg", alt: alt1 },
   ];
 
+  const rutaencabezado ="https://res.cloudinary.com/dbebikryr/image/upload/v1762061287/Encabezado_zndx5d.png"
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/VinicolaElAguaje/Encabezado.png"}
-        headerAlt="Vinícola El Aguaje"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Vinícola El Aguaje - Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">{parrafo1}</p>

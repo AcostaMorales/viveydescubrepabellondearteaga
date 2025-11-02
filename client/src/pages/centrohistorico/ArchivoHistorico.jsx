@@ -33,13 +33,16 @@ const ArchivoHistorico = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage="/assents/imagenes/ArchivoHistorico/Encabezado.png"
-        headerAlt="Archivo Histórico Municipal"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762055938/Encabezado_bhilju.png"
+            alt= "Archivo Histórico Municipal - Pabellón de Arteaga"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
           <h1 className="detail-main-title">Archivo Histórico Municipal - Pabellon de Arteaga</h1>
               <p className="detail-paragraph">El Archivo Histórico Municipal de Pabellón de Arteaga es un espacio dedicado a la preservación y difusión de la memoria colectiva del municipio. Resguarda documentos, fotografías, planos y registros que cuentan la historia de la comunidad desde sus orígenes como asentamiento de trabajadores ferrocarrileros hasta su consolidación como uno de los municipios más importantes de Aguascalientes.</p>

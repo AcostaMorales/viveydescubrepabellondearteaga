@@ -20,13 +20,16 @@ const PlazaPrincipal = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage="/assents/imagenes/PlazaPrincipal/Encabezado.png"
-        headerAlt="Plaza Principal"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762056069/Encabezado_kbyelo.png"
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Plaza Principal - Pabellon de Arteaga</h1>
                 <p className="detail-paragraph">La Plaza Principal de Pabellón de Arteaga es el núcleo histórico, social y cultural del municipio. Rodeada por edificios emblemáticos como la Presidencia Municipal, el Monumento del Reloj, el Mural Histórico, y a pocos pasos de la Antigua Estación de Ferrocarril, esta plaza representa el corazón simbólico de la ciudad.</p>

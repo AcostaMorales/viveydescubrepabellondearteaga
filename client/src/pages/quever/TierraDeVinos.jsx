@@ -27,13 +27,16 @@ const TierraDeVinos = () => {
 
   return (
     <div className="navigation-page wine">
-      <Header
-        headerImage="/assents/imagenes/TierraDeVino/Encabezado.png"
-        headerAlt="Tierra de Vinos"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="navigation-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762054809/Encabezado_swgb6f.png"
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <h3 className="navigation-section-title">Bodegas y Viñedos para Visitar</h3>
         <div className="navigation-grid">
           {navigationItems.map((item) => (

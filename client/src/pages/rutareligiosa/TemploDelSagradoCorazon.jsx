@@ -40,15 +40,20 @@ const TemploDelSagradoCorazon = () => {
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/RutaReligiosa/TDelSagradoCorazon/Carrusel/TDelSagradoCorazonC11.jpeg", alt: alt1 }
   ];
 
+  const rutaencabezado = "https://res.cloudinary.com/dbebikryr/image/upload/v1762062367/Encabezado_rwm8s3.png";
+
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/RutaReligiosa/TDelSagradoCorazon/Encabezado.png"}
-        headerAlt="Templo del Sagrado Corazón del Refugio"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Templo del Sagrado Corazón"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
           <h1 className="detail-main-title">Templo del Sagrado Corazón del Refugio - Pabellón de Arteaga</h1>
           <p className="detail-paragraph">{parrafo1}</p>

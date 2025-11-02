@@ -37,15 +37,20 @@ const TemploDeNtraSenoraDelRefugio = () => {
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/RutaReligiosa/CapillaDeNtraSraDelRefugio/Carrusel/CapillaDeNtraSraDelRefugioC7.jpeg", alt: alt1 }
   ];
 
+  const rutaencabezado = "https://res.cloudinary.com/dbebikryr/image/upload/v1762062401/Encabezado_ba3cyi.png";
+
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/RutaReligiosa/CapillaDeNtraSraDelRefugio/Encabezado.png"}
-        headerAlt="Capilla de Nuestra Señora del Refugio"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Templo de Ntra. Señora del Refugio"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
           <h1 className="detail-main-title">Capilla de Nuestra Señora del Refugio - Pabellón de Arteaga</h1>
           <p className="detail-paragraph">{parrafo1}</p>

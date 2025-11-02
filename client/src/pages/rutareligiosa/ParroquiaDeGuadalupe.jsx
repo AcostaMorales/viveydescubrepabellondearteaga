@@ -35,15 +35,20 @@ const ParroquiaDeGuadalupe = () => {
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/RutaReligiosa/ParroquiaDeGudalupe/Carrusel/ParroquiaGDLC23.jpeg", alt: alt1 }
   ];
 
+  const rutaencabezado = "https://res.cloudinary.com/dbebikryr/image/upload/v1762064283/Encabezado_ieeaki.png";
+
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/RutaReligiosa/ParroquiaDeGudalupe/Encabezado.png"}
-        headerAlt="Parroquia de Guadalupe"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Parroquia de Guadalupe"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
           <h1 className="detail-main-title">Parroquia de Guadalupe - Pabellón de Arteaga</h1>
           <p className="detail-paragraph">{parrafo1}</p>

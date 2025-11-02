@@ -6,7 +6,7 @@ import "../../styles/DetailPage.css";
 
 const SegundaParte = () => {
   useScrollToTop();
-  const rutaImagenesBase = "https://raw.githubusercontent.com/AcostaMorales/AlmacenDeImagenes/main/";
+  
 
   
   const parrafo1 = "Vinos Segunda Parte nace del deseo de rescatar una tradición vitivinícola familiar. Su fundadora, Maricela Acosta Herrera, decidió honrar el legado de su padre —productor de vid décadas atrás— creando un vino propio para su restaurante familiar.";
@@ -25,15 +25,21 @@ const SegundaParte = () => {
   const elemento2Lista2 = "Experiencia gastronómica en Las Camelinas, donde estos vinos nacieron como parte del menú.";
   const elemento3Lista2 = "Compra de botellas y paquetes especiales para llevar como recuerdo local o regalo.";
   const elemento4Lista2 = "Participación en eventos vinícolas y ferias enológicas locales donde Segunda Parte tiene presencia.";
+  
+  const rutaencabezado ="https://res.cloudinary.com/dbebikryr/image/upload/v1762061255/Encabezado_dmo8tz.png"
+
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/VinosSegundaParte/Encabezado.png"}
-        headerAlt="Vinos Segunda Parte"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Vinos Segunda Parte - Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">{parrafo1}</p>

@@ -19,15 +19,18 @@ const MonumentoALaVendimia = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage="/assents/imagenes/MonumentoALaVendimia/Encabezado.png"
-        headerAlt="Monumento a la Vendimia"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762055973/Encabezado_ebnffh.png"
+            alt= "Monumento a la Vendimia"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
-                <h1 className="detail-main-title">Monumento a la Vendimia</h1>
+                <h1 className="detail-main-title">Monumento a la Vendimia — Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">La escultura representa a una mujer campesina —la “vendimiadora”— en plena faena de recolección de uvas. En su brazo izquierdo porta una canasta colmada de racimos, colgando desde su muñeca el cesto cargado hacia abajo. Con el brazo derecho, ligeramente elevado, sostiene un racimo de uvas al nivel de su rostro, como observándolo con orgullo y atención.</p>
                 <p className="detail-paragraph">La postura corporal sugiere movimiento: el cuerpo inclinado levemente hacia la izquierda, la pierna izquierda adelantada firmemente apoyada y la pierna derecha atrás, con el talón ligeramente levantado, como si estuviese por dar un paso adelante.</p>
                 <p className="detail-paragraph">El gesto facial, la posición de cejas y la dirección de la mirada transmiten una expresión de determinación, dignidad y orgullo hacia el fruto de su trabajo.</p>

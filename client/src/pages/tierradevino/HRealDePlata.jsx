@@ -29,15 +29,19 @@ const HRealDePlata = () => {
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/HaciendaVinicolaRealDePlata/Carrusel/HaciendaVinicolaRealDePlataC1.jpeg", alt: alt1 },
   ];
 
+  const rutaencabezado ="https://res.cloudinary.com/dbebikryr/image/upload/v1762060995/Encabezado_ixgkl1.png"
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/HaciendaVinicolaRealDePlata/Encabezado.png"}
-        headerAlt="Hacienda Vinícola Real de Plata"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Hacienda Vinícola Real de Plata - Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">{parrafo1}</p>

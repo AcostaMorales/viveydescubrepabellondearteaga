@@ -19,14 +19,16 @@ const RutaReligiosa = () => {
 
   return (
     <div className="navigation-page orange">
-      <Header
-        headerImage={rutaImagenesBase + 'ImagenesRepertorio/Paginas/RutaReligiosa/Encabezado.png'}
-        headerAlt="Ruta Religiosa"
-        showHeaderImage={true}
-        hasNotifications={false}
-      />
+      <Header />
 
       <div className="navigation-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762055027/Encabezado_2_ryygxg.png"
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <h3 className="navigation-section-title">Templos y Capillas para Visitar</h3>
         <div className="navigation-grid">
           {navigationItems.map((item) => (

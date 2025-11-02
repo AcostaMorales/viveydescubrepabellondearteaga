@@ -9,13 +9,16 @@ const Reloj = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage="/assents/imagenes/Reloj/Encabezado.png"
-        headerAlt="Monumento del Reloj"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762056089/Encabezado_izwkyl.png"
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Monumento del Reloj - Pabellon de Arteaga</h1>
                 <p className="detail-paragraph">El Monumento del Reloj es uno de los íconos urbanos más reconocibles de Pabellón de Arteaga. Se encuentra en el corazón de la plaza principal y representa el centro simbólico y social de la ciudad. Su diseño combina líneas arquitectónicas clásicas con detalles modernos, ofreciendo un punto de referencia visual para visitantes y habitantes.</p>

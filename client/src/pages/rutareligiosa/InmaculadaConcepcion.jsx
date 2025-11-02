@@ -33,15 +33,20 @@ const InmaculadaConcepcion = () => {
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/RutaReligiosa/InmaculadaConcepcion/Carrusel/CapillaDeLaInmaculadaConcepcionC11.jpeg", alt: alt1 }
   ];
 
+  const rutaencabezado = "https://res.cloudinary.com/dbebikryr/image/upload/v1762062293/Encabezado_3_ofd8pw.png";
+
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/RutaReligiosa/InmaculadaConcepcion/Encabezado.png"}
-        headerAlt="Templo de la Inmaculada Concepción"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Templo de la Inmaculada Concepción"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
           <h1 className="detail-main-title">Templo de la Inmaculada Concepción - Pabellón de Arteaga</h1>
           <p className="detail-paragraph">{parrafo1}</p>

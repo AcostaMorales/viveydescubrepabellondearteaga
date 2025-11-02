@@ -20,15 +20,17 @@ const AntiguaEstacion = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage="/assents/imagenes/AntiguaEstacion/Encabezado.png"
-        headerAlt="Antigua Estación del Ferrocarril"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762055917/Encabezado_dymmce.png"
+            alt= "Antigua estación del ferrocarril"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
-          <h1 className="detail-main-title">Antigua estación del ferrocarril - Pabellón de Arteaga</h1>
           <h1 className="detail-main-title">Antigua estación del ferrocarril - Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">La Antigua Estación del Ferrocarril es uno de los sitios más emblemáticos de Pabellón de Arteaga, Aguascalientes. Construida a principios del siglo XX, esta estación fue parte fundamental en la vida económica y social del municipio, ya que a través de sus vías se transportaban personas, mercancías y materiales que impulsaron el desarrollo de la región.</p>
                 <p className="detail-paragraph">La llegada del ferrocarril significó un punto de encuentro para los primeros pobladores, muchos de ellos trabajadores que participaron en la construcción de la Presa Calles y en el crecimiento urbano del municipio. La estación se convirtió en símbolo de progreso y modernidad, y hasta el día de hoy permanece como un vestigio histórico que conecta a las nuevas generaciones con sus raíces.</p>

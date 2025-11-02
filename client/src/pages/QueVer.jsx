@@ -60,7 +60,7 @@ const QueVer = () => {
       <div className="navigation-content">
         <div className="">
           <img
-            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762053487/Encabezado_csp9fs.png"
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762054785/Encabezado_x15n8e.png"
             alt= "Que ver"
             className="header-image"
           />

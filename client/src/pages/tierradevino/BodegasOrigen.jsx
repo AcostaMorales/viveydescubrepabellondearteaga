@@ -9,6 +9,7 @@ const BodegasOrigen = () => {
   useScrollToTop();
   const rutaImagenesBase = "https://raw.githubusercontent.com/AcostaMorales/AlmacenDeImagenes/main/";
   const alt1 = "";
+  const rutaencabezado = "https://res.cloudinary.com/dbebikryr/image/upload/v1762056907/Encabezado_hqrlk7.png"
 
   const galleryImages = [
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/BodegasElOrigen/Carrusel/BodegasElorigenC1.jpg", alt: alt1 },
@@ -17,13 +18,16 @@ const BodegasOrigen = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/BodegasElOrigen/Encabezado.png"}
-        headerAlt="Bodegas Origen"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Bodegas Origen - Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">Aquí no solo caminas entre parras…</p>

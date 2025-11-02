@@ -24,13 +24,16 @@ const ParqueInfantil = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage="/assents/imagenes/ParqueInfantil/Encabezado.png"
-        headerAlt="Parque Infantil"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762056050/Encabezado_orifhd.png"
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Parque Infantil - Pabellon de Arteaga</h1>
                 <p className="detail-paragraph">El Parque Infantil de Pabellón de Arteaga es un espacio recreativo emblemático en el corazón del municipio, diseñado para el disfrute familiar, la recreación infantil y el descanso de visitantes. Se encuentra estratégicamente ubicado cerca de los principales atractivos históricos y culturales de la ciudad, lo que lo convierte en una parada ideal dentro de cualquier recorrido turístico.</p>

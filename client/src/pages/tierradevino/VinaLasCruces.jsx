@@ -23,15 +23,19 @@ const VinaLasCruces = () => {
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/VinaLasCruces/Carrusel/VinaLasCucesC1.jpg", alt: alt1 },
   ];
 
+  const rutaencabezado ="https://res.cloudinary.com/dbebikryr/image/upload/v1762061273/Encabezado_amyplz.png"
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/VinaLasCruces/Encabezado.png"}
-        headerAlt="Viña Las Cruces"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Viña Las Cruces - Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">{parrafo1}</p>

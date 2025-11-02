@@ -29,12 +29,15 @@ const CentroHistorico = () => {
 
   return (
     <div className="navigation-page blue">
-      <Header
-        headerImage="/assents/imagenes/CentroHistorico/Encabezado.png"
-        headerAlt="Centro Histórico"
-        showHeaderImage={true}
-      />
+      <Header />
       <div className="navigation-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762054768/Encabezado_rh9aio.png"
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <h3 className="navigation-section-title">Lugares para Visitar</h3>
         <div className="navigation-grid">
           {navigationItems.map((item) => (

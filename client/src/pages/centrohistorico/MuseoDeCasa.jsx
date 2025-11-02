@@ -18,15 +18,18 @@ const MuseoDeCasa = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage="/assents/imagenes/MuseoDeCasa/Encabezado.png"
-        headerAlt=" Museo de la Casa en el Vagón del Tren"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762056022/Encabezado_srne3k.png"
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
-          <h1 className="detail-main-title">Archivo Histórico Municipal - Pabellon de Arteaga</h1>
+          <h1 className="detail-main-title"> Museo de la Casa en el Vagón del Tren - Pabellon de Arteaga</h1>
                 <p className="detail-paragraph">El Museo de la Casa en el Vagón del Tren es un espacio único que combina el patrimonio ferroviario con la historia tecnológica y cultural de Pabellón de Arteaga. Está ubicado en un vagón de tren restaurado, situado a un costado de la Antigua Estación de Ferrocarril, y ofrece una experiencia inmersiva en la memoria colectiva del municipio.</p>
                 <p className="detail-paragraph">En su interior se encuentra una de las piezas más valiosas del acervo cultural local:</p>
                 <ul className="detail-list">

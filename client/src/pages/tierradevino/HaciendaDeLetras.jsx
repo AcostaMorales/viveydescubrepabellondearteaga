@@ -23,15 +23,20 @@ const HaciendaDeLetras = () => {
     { src: rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/HaciendaDeLetras/Carrusel/HaciendaDeLetrasC2.jpeg", alt: alt1 },
   ];
 
+  const rutaencabezado = "https://res.cloudinary.com/dbebikryr/image/upload/v1762060954/Encabezado_v9f7go.png"; 
+
   return (
     <div className="detail-page">
-      <Header
-        headerImage={rutaImagenesBase + "ImagenesRepertorio/Contenido/TierraDeVinos/HaciendaDeLetras/Encabezado.png"}
-        headerAlt="Hacienda de Letras"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src= {rutaencabezado} 
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
                 <h1 className="detail-main-title">Hacienda de Letras - Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">{parrafo1}</p>

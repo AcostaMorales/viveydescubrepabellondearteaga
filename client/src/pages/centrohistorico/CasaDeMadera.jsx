@@ -18,13 +18,16 @@ const CasaDeMadera = () => {
 
   return (
     <div className="detail-page">
-      <Header
-        headerImage="/assents/imagenes/CasaDeMadera/Encabezado.png"
-        headerAlt="Casa de Madera"
-        showHeaderImage={true}
-      />
+      <Header />
 
       <div className="detail-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762055957/Encabezado_uredgo.png"
+            alt= "Casa de Madera - Pabellón de Arteaga"
+            className="header-image"
+          />
+        </div>
         <div className="detail-section">
           <h1 className="detail-main-title">Casa de Madera - Pabellon de Arteaga</h1>
             <p className="detail-paragraph">La Casa de Madera es uno de los vestigios históricos más representativos del municipio de Pabellón de Arteaga. Este espacio resguarda la memoria de los primeros pobladores de la región, muchos de ellos ferrocarrileros que llegaron con la construcción de la ruta del tren, misma que fue fundamental para el desarrollo de la Presa Calles y del propio municipio.</p>
