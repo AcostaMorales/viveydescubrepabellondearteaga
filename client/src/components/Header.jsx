@@ -9,7 +9,7 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false, hasNotificati
   const navigate = useNavigate();
 
   const isHomePage = location.pathname === '/';
-
+ 
   useEffect(() => {
     const bodyElement = document.body;
 

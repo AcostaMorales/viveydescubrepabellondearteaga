@@ -17,7 +17,7 @@ const RutaReligiosa = () => {
     },
     { id: 2, 
         title: 'Carrera Atlética Día de Muertos', 
-        image: rutaImagenesBase + 'ImagenesRepertorio/Paginas/FeriasYFestividades/DesfileDeCalaveras.jpgg', 
+        image: rutaImagenesBase + 'ImagenesRepertorio/Paginas/FeriasYFestividades/DesfileDeCalaveras.jpg', 
         externalUrl: "https://github.com/AcostaMorales/AlmacenDeImagenes/raw/main/ImagenesRepertorio/Paginas/FeriasYFestividades/Desfile/Desfile.pdf",
         openInNewTab: true,
     },

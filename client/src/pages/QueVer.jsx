@@ -53,14 +53,18 @@ const QueVer = () => {
   return (
     <div className="navigation-page green">
       {/* Header con imagen */}
-      <Header
-        headerImage="/assents/imagenes/PaginaQueVer/Encabezado.png"
-        headerAlt="Tierra de Vinos"
-        showHeaderImage={true}
-      />
+      <Header />
+      
 
       {/* Sección principal de navegación */}
       <div className="navigation-content">
+        <div className="">
+          <img
+            src="https://res.cloudinary.com/dbebikryr/image/upload/v1762053487/Encabezado_csp9fs.png"
+            alt= "Que ver"
+            className="header-image"
+          />
+        </div>
         <h3 className="navigation-section-title">Qué ver en Pabellón de Arteaga</h3>
         <div className="navigation-grid">
           {navigationItems.map((item) => (
