@@ -7,10 +7,14 @@ import errorHandler from './middlewares/error.js';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import healthRoutes from './routes/healthRoutes.js';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 import routes from './routes/index.js';
 import {corsOptions} from './config/corsOption.js';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -26,5 +30,19 @@ app.use('/health', healthRoutes);
 
 // Rutas
 app.use('/api', routes);
+
+// Ruta de bienvenida
+app.get('/', (req, res) => {
+  res.json({ 
+    message: '🚀 Servidor de Pabellón de Arteaga funcionando',
+    version: '1.0.0',
+    adminPanel: '/api/admin',
+    docs: {
+      admin: 'GET /api/admin - Panel de administración (requiere autenticación)',
+      scheduler: 'GET /api/scheduler/status - Estado del scheduler',
+      notifications: 'GET /api/admin/notifications - Gestión de notificaciones'
+    }
+  });
+});
 
 export default app;

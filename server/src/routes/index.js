@@ -5,6 +5,8 @@ import assetRoutes from './assetRoutes.js';
 import notificationRoutes from './notificationRoutes.js';
 import navigationCard from './navigationCardRoutes.js';
 import pageContentRoutes from './pageContentRoutes.js';
+import schedulerRoutes from './schedulerRoutes.js';
+import adminRoutes from './adminRoutes.js';
 
 const router = Router();
 
@@ -22,5 +24,11 @@ router.use('/navigation-card', navigationCard);
 
 //Rutas de contenidos de páginas
 router.use('/page-contents', pageContentRoutes);
+
+//Rutas de administración del scheduler
+router.use('/scheduler', schedulerRoutes);
+
+//Rutas del panel de administración
+router.use('/admin', adminRoutes);
 
 export default router;

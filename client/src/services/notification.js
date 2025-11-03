@@ -19,6 +19,8 @@ export const requestNotificationPermission = async () => {
         throw new Error('Las notificaciones no están soportadas en este navegador');
     }
 
+    // Notification es una API del navegador que maneja los permisos
+    // para mostrar notificaciones al usuario
     const permission = await Notification.requestPermission();
     return permission === 'granted';
 };
@@ -51,6 +53,7 @@ export const subscribeToPushNotifications = async () => {
             throw new Error('Permisos de notificación denegados');
         }
 
+        // Registrar el service worker si no está registrado
         const registration = await navigator.serviceWorker.ready;
         
         const subscription = await registration.pushManager.subscribe({

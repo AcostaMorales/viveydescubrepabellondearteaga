@@ -134,8 +134,8 @@ NotificationSchema.pre('validate', function preValidate(next){
 
     // Si nextRunAt no esta definido lo calculamos
     // osea si no tiene un valor le asignamos el valor calculado
-    if (!thisnextRunAt){
-        this.nextRunAt = this.computeNextRun(newDate());
+    if (!this.nextRunAt){
+        this.nextRunAt = this.computeNextRun(new Date());
     }
 
     // Si expireAt existe y nextRunAt existe y nextRunAt es mayor que expireAt

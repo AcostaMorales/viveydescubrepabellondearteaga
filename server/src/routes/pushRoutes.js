@@ -1,20 +1,19 @@
 // routes/pushRoutes.js
 import { Router } from 'express';
 import SubscriptionController from '../controllers/SubscriptionController.js';
-// Si tienes middleware admin, podrías importarlo:
-// import requireAdmin from '../middlewares/requireAdmin.js';
+import adminAuth from '../middlewares/adminAuth.js';
 
 const router = Router();
 
 // Público
 router.post('/subscribe', SubscriptionController.subscribe);
 
-// Admin (puedes protegerlo con requireAdmin si quieres)
-router.post('/broadcast', /* requireAdmin, */ SubscriptionController.broadcast);
+// Admin (requiere autenticación)
+router.post('/broadcast', adminAuth, SubscriptionController.broadcast);
 
 // --- Opcionales ---
 router.post('/unsubscribe', SubscriptionController.unsubscribe);
 router.post('/touch', SubscriptionController.touch);
-router.post('/to-device', /* requireAdmin, */ SubscriptionController.sendToDevice);
+router.post('/to-device', adminAuth, SubscriptionController.sendToDevice);
 
 export default router;
