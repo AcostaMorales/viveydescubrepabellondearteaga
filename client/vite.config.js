@@ -48,14 +48,14 @@ export default defineConfig({
             sizes: '512x512',
             type: 'image/png',
             form_factor: 'narrow',
-            label: 'Feria de Pabellón - Vista móvil'
+            label: 'Vive y descubre Pabellon de Arteaga - Vista móvil'
           },
           {
             src: 'screenshot/pwa-512x512.png',
             sizes: '512x512', 
             type: 'image/png',
             form_factor: 'wide',
-            label: 'Feria de Pabellón - Vista escritorio'
+            label: 'Vive y descubre Pabellon de Arteaga - Vista escritorio'
           }
         ]
       },
