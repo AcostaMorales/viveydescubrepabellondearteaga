@@ -14,7 +14,7 @@ export default defineConfig({
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
         name: 'Guia turistica Pabellón de Arteaga',
-        short_name: 'VivePabelon',
+        short_name: 'VivePabellon',
         description: 'Aplicación oficial de guía turistica de Pabellón de Arteaga',
         theme_color: '#667eea',
         background_color: '#ffffff',
