@@ -93,6 +93,30 @@ const SubscriptionController = {
     }
   },
 
+  // DELETE /push/unsubscribe/:deviceId
+  async unsubscribeByDevice(req, res, next) {
+    try {
+      const { deviceId } = req.params;
+      if (!deviceId) {
+        return res.status(400).json({ message: 'deviceId required' });
+      }
+      
+      const result = await Subscription.deleteOne({ deviceId });
+      
+      if (result.deletedCount === 0) {
+        return res.status(404).json({ message: 'Subscription not found' });
+      }
+      
+      return res.status(200).json({ 
+        message: 'Unsubscribed successfully', 
+        deviceId,
+        deleted: result.deletedCount 
+      });
+    } catch (err) {
+      next(err);
+    }
+  },
+
   // POST /push/touch (actualizar lastSeen)
   async touch(req, res, next) {
     try {
@@ -122,6 +146,27 @@ const SubscriptionController = {
         await Subscription.deleteOne({ deviceId: req.body.deviceId }).catch(() => {});
         return res.status(410).json({ message: 'Subscription expired and removed' });
       }
+      next(err);
+    }
+  },
+
+  // GET /push/subscriptions (admin)
+  async listSubscriptions(req, res, next) {
+    try {
+      const subscriptions = await Subscription.find({}, {
+        deviceId: 1,
+        endpoint: 1,
+        userAgent: 1,
+        lastSeen: 1,
+        createdAt: 1
+      }).sort({ lastSeen: -1 });
+
+      return res.status(200).json({
+        message: 'Subscriptions retrieved successfully',
+        count: subscriptions.length,
+        subscriptions
+      });
+    } catch (err) {
       next(err);
     }
   },

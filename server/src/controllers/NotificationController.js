@@ -111,6 +111,59 @@ const NotificationController = {
     }
   },
 
+  // GET /notifications/unread-count
+  async getUnreadCount(req, res, next) {
+    try {
+      const now = new Date();
+      const lastCheck = req.query.lastCheck ? new Date(req.query.lastCheck) : null;
+      
+      const q = buildActiveQuery(now);
+      if (lastCheck) {
+        q.createdAt = { $gt: lastCheck };
+      }
+
+      const count = await Notification.countDocuments(q);
+      res.json({ count, hasNew: count > 0 });
+    } catch (err) {
+      next(err);
+    }
+  },
+
+  // PATCH /notifications/mark-read
+  async markAllAsRead(req, res, next) {
+    try {
+      // En este caso simplemente confirmamos la lectura
+      // No modificamos las notificaciones, solo enviamos confirmación
+      res.json({ message: 'Marked as read', timestamp: new Date() });
+    } catch (err) {
+      next(err);
+    }
+  },
+
+  // DELETE /notifications/:id (público)
+  async deleteNotification(req, res, next) {
+    try {
+      const { id } = req.params;
+      
+      // Solo permitir eliminar notificaciones activas
+      const now = new Date();
+      const query = { 
+        _id: id, 
+        ...buildActiveQuery(now)
+      };
+      
+      const result = await Notification.deleteOne(query);
+      
+      if (result.deletedCount === 0) {
+        return res.status(404).json({ message: 'Notificación no encontrada o no puede ser eliminada' });
+      }
+      
+      res.json({ message: 'Notificación eliminada correctamente' });
+    } catch (err) {
+      next(err);
+    }
+  },
+
   /** ======================
    *  Admin (requireAdmin)
    *  ====================== */
@@ -120,7 +173,9 @@ const NotificationController = {
     try {
       const {
         title,
-        body,
+        message,
+        body, // fallback para compatibilidad
+        type,
         icon,
         url,
         data,
@@ -131,8 +186,8 @@ const NotificationController = {
         target, // opcional
       } = req.body || {};
 
-      if (!title || !body) {
-        return res.status(400).json({ message: 'title and body are required' });
+      if (!title || (!message && !body)) {
+        return res.status(400).json({ message: 'title and message are required' });
       }
       const start = startAt ? new Date(startAt) : new Date();
       const exp = expireAt ? new Date(expireAt) : null;
@@ -143,7 +198,9 @@ const NotificationController = {
 
       const doc = new Notification({
         title,
-        body,
+        message: message || body, // usar message, fallback a body
+        body: body || message, // mantener body para compatibilidad
+        type: type || 'info',
         icon,
         url,
         data,
@@ -282,6 +339,7 @@ const NotificationController = {
       if (q) {
         qy.$or = [
           { title: { $regex: q, $options: 'i' } },
+          { message: { $regex: q, $options: 'i' } },
           { body: { $regex: q, $options: 'i' } },
         ];
       }

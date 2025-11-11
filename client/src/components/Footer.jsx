@@ -150,7 +150,7 @@ const Footer = () => {
         className="floating-left-wrapper"
         style={{ bottom: '160px' }}
       >
-        <NotificationButton inline className="floating-left-btn floating-left-notif" />
+        <NotificationButton inline className="floating-left-btn" />
       </div>
      
     </footer>

@@ -4,14 +4,24 @@ const NotificationSchema = new mongoose.Schema({
     // === Contenido a mostrar en la notificación ===
     //titulo
     title: { type: String, required: true, trim: true },
-    //cuerpo
-    body: { type: String, required: true, trim: true },
+    //cuerpo / mensaje
+    message: { type: String, required: true, trim: true },
+    //cuerpo (alias para compatibilidad)
+    body: { type: String, trim: true },
     //icono
     icon: { type: String, default: '/icon.png', trim: true },
     //url a abrir al hacer clic en la notificación
     url: { type: String, default: '/', trim: true },
     // datos adicionales que se pueden enviar con la notificación
     data: { type: mongoose.Schema.Types.Mixed, default: {} },
+    // tipo de notificación para mostrar iconos diferentes
+    type: { 
+      type: String, 
+      enum: ['info', 'event', 'update', 'warning', 'success'], 
+      default: 'info' 
+    },
+    // campo para marcar como leída
+    read: { type: Boolean, default: false },
 
     // === Destino: a todos o a una lista de deviceIds ===
     // objetivo de la notificación
@@ -86,11 +96,10 @@ NotificationSchema.index({ expireAt: 1 });
 NotificationSchema.methods.toPayLoad = function toPayLoad() {
     return JSON.stringify({
         title: this.title,
-        body: this.body,
+        body: this.message || this.body, // usar message primero, luego body como fallback
         icon: this.icon,
         url: this.url,
         data: this.data,
-
     });
 }
 

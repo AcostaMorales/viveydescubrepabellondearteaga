@@ -2,6 +2,8 @@
 :root {
   /* Colores principales */
   --primary-color: #000000;
+  --primary-dark: #1a1a1a;
+  --primary-light: #f0f0f0;
   --secondary-color: #4a7c59;
   --accent-color: #8fbc8f;
   --background-color: #f8f9fa;
@@ -10,6 +12,17 @@
   --gray-medium: #6c757d;
   --gray-dark: #343a40;
   --black: #000000;
+  
+  /* Colores de texto */
+  --text-primary: #343a40;
+  --text-secondary: #6c757d;
+  --text-tertiary: #adb5bd;
+  
+  /* Colores de estado */
+  --error-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
   
   /* Header y Footer */
   --header-height: 80px;

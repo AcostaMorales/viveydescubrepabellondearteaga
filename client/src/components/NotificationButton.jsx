@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
     subscribeToPushNotifications, 
-    unsubscribeFromPushNotifications, 
     getSubscriptionStatus, 
 } from '../services/notification';
 
@@ -29,25 +28,10 @@ const NotificationButton = ({ inline = true, className = '', autoHideOnToggle = 
             await subscribeToPushNotifications();
             if (autoHideOnToggle) setHidden(true);
             await checkSubscriptionStatus();
-            alert('¡Notificaciones activadas! 🔔\nRecibirás actualizaciones de la feria.');
+            alert('¡Notificaciones activadas! 🔔\nRecibirás notificaciones de vive y descubre Pabellón de Arteaga.');
         } catch (error) {
             console.error('Error activando notificaciones:', error);
             alert('Error activando notificaciones: ' + error.message);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    const handleUnsubscribe = async () => {
-        setLoading(true);
-        try {
-            await unsubscribeFromPushNotifications();
-            if (autoHideOnToggle) setHidden(true);
-            await checkSubscriptionStatus();
-            alert('Notificaciones desactivadas 🔕');
-        } catch (error) {
-            console.error('Error desactivando notificaciones:', error);
-            alert('Error desactivando notificaciones: ' + error.message);
         } finally {
             setLoading(false);
         }
@@ -59,18 +43,23 @@ const NotificationButton = ({ inline = true, className = '', autoHideOnToggle = 
         return null; // No mostrar si no hay soporte
     }
 
+    // Ocultar si ya está suscrito (solo mostrar para suscribirse)
+    if (subscriptionStatus.subscribed) {
+        return null;
+    }
+
     return (
         <div className={inline ? "" : "notification-container"}>
             <button 
-                onClick={subscriptionStatus.subscribed ? handleUnsubscribe : handleSubscribe}
+                onClick={handleSubscribe}
                 disabled={loading}
-                className={className || `notification-button footer-tool-btn ${subscriptionStatus.subscribed ? 'subscribed' : 'unsubscribed'}` }
-                title={subscriptionStatus.subscribed ? 'Desactivar notificaciones' : 'Activar notificaciones'}
+                className={className || `notification-button footer-tool-btn unsubscribed`}
+                title="Activar notificaciones"
             >
                 <span className="notification-icon">
-                    {loading ? '⏳' : subscriptionStatus.subscribed ? '🔔' : '🔕'}
+                    {loading ? '⏳' : '🔔'}
                 </span>
-                {loading ? 'Procesando...' : subscriptionStatus.subscribed ? 'Notificaciones ON' : 'Activar Notificaciones'}
+                {loading ? 'Procesando...' : 'Activar Notificaciones'}
             </button>
         </div>
     );

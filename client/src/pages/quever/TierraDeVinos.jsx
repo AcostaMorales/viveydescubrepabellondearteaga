@@ -12,14 +12,36 @@ const TierraDeVinos = () => {
   const navigate = useNavigate();
 
   const navigationItems = [
-    { id: 1, title: 'Bodegas origen', image: '/assents/imagenes/TierraDeVino/BodegasOrigen.png', path: '/quever/tierradevinos/bodegasorigen' },
-    { id: 2, title: 'Hacienda de letras', image: '/assents/imagenes/TierraDeVino/HaciendaDeLetras.png', path: '/quever/tierradevinos/haciendadeletras' },
-    { id: 3, title: 'Rancho ubuntu', image: '/assents/imagenes/TierraDeVino/RanchoUbuntu.png', path: '/quever/tierradevinos/ranchoubuntu' },
-    { id: 4, title: 'Real de plata', image: '/assents/imagenes/TierraDeVino/RealDePlata.png', path: '/quever/tierradevinos/realdeplata' },
-    { id: 5, title: 'Segunda parte', image: '/assents/imagenes/TierraDeVino/SegundaParte.png', path: '/quever/tierradevinos/segundaparte' },
-    { id: 6, title: 'Viñedo las cruces', image: '/assents/imagenes/TierraDeVino/VinedoLasCruces.png', path: '/quever/tierradevinos/vinedolascruces' },
-    { id: 7, title: 'Vinicola el aguaje', image: '/assents/imagenes/TierraDeVino/VinicolaElAguaje.png', path: '/quever/tierradevinos/vinicolaelaguaje' },
-    { id: 8, title: 'Vinicola el sarmiento', image: '/assents/imagenes/TierraDeVino/VinicolaElSarmiento.png', path: '/quever/tierradevinos/vinicolaelsarmiento' },
+    //Patrocinadores que pagaron
+    { id: 1, 
+      title: 'Vinicola el sarmiento', 
+      image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762813225/VinicolaSarmiento_pywyls.png', 
+      path: '/quever/tierradevinos/vinicolaelsarmiento' 
+    },
+    { id: 2, 
+      title: 'Vinicola el aguaje', 
+      image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762820680/VinicolaElAguaje_d68vmv.png', 
+      path: '/quever/tierradevinos/vinicolaelaguaje' 
+    },
+    { id: 3, 
+      title: 'Viñedo las cruces', 
+      image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762820854/VinicolaLasTresCruces_kwaxgg.png', 
+      path: '/quever/tierradevinos/vinedolascruces' },
+    { id: 4, 
+      title: 'Hacienda de letras', 
+      image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762820931/VinicolaHaciendaDeLetras_iwn0ii.png', 
+      path: '/quever/tierradevinos/haciendadeletras' },
+
+    //Paatrocinadores que no pagaron
+    { id: 5, 
+      title: 'Bodegas origen', 
+      image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762810725/BodegasOrigen_purwum.png', 
+      path: '/quever/tierradevinos/bodegasorigen' },
+    { id: 6, title: 'Rancho ubuntu', image: '/assents/imagenes/TierraDeVino/RanchoUbuntu.png', path: '/quever/tierradevinos/ranchoubuntu' },
+    { id: 7, title: 'Real de plata', image: '/assents/imagenes/TierraDeVino/RealDePlata.png', path: '/quever/tierradevinos/realdeplata' },
+    { id: 8, title: 'Segunda parte', image: '/assents/imagenes/TierraDeVino/SegundaParte.png', path: '/quever/tierradevinos/segundaparte' },
+    
+    
     { id: 9, title: 'Vinicola Santa Elena', image: '/assents/imagenes/TierraDeVino/VinicolaSantaElena.png', path: '/quever/tierradevinos/vinicolasantaelena' },
   ];
 

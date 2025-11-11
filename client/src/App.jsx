@@ -7,6 +7,7 @@ import Footer from './components/Footer.jsx';
 // Páginas principales
 import Home from './pages/Home.jsx';
 import QueVer from './pages/QueVer.jsx';
+import Notificaciones from './pages/Notificaciones.jsx';
 
 // Páginas de navegación (¿Qué ver?)
 import CentroHistorico from './pages/quever/CentroHistorico.jsx';
@@ -82,6 +83,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/quever" element={<QueVer />} />
+            <Route path="/notificaciones" element={<Notificaciones />} />
             <Route path="/quever/centrohistorico" element={<CentroHistorico />} />
             <Route path="/quever/tierradevinos" element={<TierraDeVinos />} />
             <Route path="/quever/rutareligiosa" element={<RutaReligiosa />} />

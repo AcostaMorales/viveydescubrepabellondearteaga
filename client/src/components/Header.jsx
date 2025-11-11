@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 import { SlArrowLeft } from 'react-icons/sl';
+import { useNotifications } from '../hooks/useNotifications';
 
-const Header = ({ headerImage, headerAlt, showHeaderImage = false, hasNotifications = false }) => {
+const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { hasNewNotifications, markAsRead } = useNotifications();
 
   const isHomePage = location.pathname === '/';
  
@@ -29,7 +31,12 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false, hasNotificati
   const toggleMenu = () => setMenuOpen((v) => !v);
   const closeMenu = () => setMenuOpen(false);
   const goBack = () => navigate(-1);
-  const goToNotifications = () => navigate('/notificaciones');
+  
+  const goToNotifications = () => {
+    // Marcar como leídas al navegar a notificaciones
+    markAsRead();
+    navigate('/notificaciones');
+  };
 
   return (
     <>
@@ -61,7 +68,7 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false, hasNotificati
                 className="campanita"
               />
             </span>
-            {hasNotifications && <span className="notification-badge" />}
+            {hasNewNotifications && <span className="notification-badge" />}
           </button>
 
           <button className="menu-button" onClick={toggleMenu} aria-label="Abrir menú">
