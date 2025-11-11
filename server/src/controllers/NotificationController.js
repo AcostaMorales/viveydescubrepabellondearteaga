@@ -31,9 +31,39 @@ function computeNextRun({ startAt, repeatEveryHours = 0, expireAt, now = new Dat
 
 function buildActiveQuery(now = new Date()) {
   return {
-    startAt: { $lte: now },
-    expireAt: { $gt: now },
-    status: { $nin: ['cancelled', 'completed'] },
+    $or: [
+      // Notificaciones activas (programadas o en ejecución)
+      {
+        startAt: { $lte: now },
+        expireAt: { $gt: now },
+        status: { $nin: ['cancelled'] },
+      },
+      // Notificaciones completadas que ya fueron enviadas (para mostrar en historial)
+      {
+        status: 'completed',
+        lastSentAt: { $exists: true }, // Solo las que fueron enviadas
+        expireAt: { $gt: now }, // Que no hayan expirado
+      }
+    ]
+  };
+}
+
+function buildPublicQuery(now = new Date()) {
+  return {
+    $or: [
+      // Notificaciones completadas que ya fueron enviadas
+      {
+        status: 'completed',
+        lastSentAt: { $exists: true },
+        expireAt: { $gt: now },
+      },
+      // Notificaciones activas que ya empezaron (no programadas para el futuro)
+      {
+        startAt: { $lte: now },
+        expireAt: { $gt: now },
+        status: 'running',
+      }
+    ]
   };
 }
 
@@ -46,7 +76,6 @@ const NotificationController = {
   async listPublic(req, res, next) {
     try {
       const {
-        active = 'true',
         limit: limitRaw,
         page: pageRaw,
         since: sinceRaw,
@@ -58,19 +87,17 @@ const NotificationController = {
       const limit = clamp(parseInt(limitRaw || '20', 10) || 20, 1, 100);
       const skip = (page - 1) * limit;
 
-      const q = {};
+      const q = buildPublicQuery(now);
+      
+      // Filtro adicional por fecha de actualización
       const since = parseIso(sinceRaw);
       if (since) {
         q.updatedAt = { $gt: since };
       }
 
-      if (active !== 'false') {
-        Object.assign(q, buildActiveQuery(now));
-      }
-
       const [data, total] = await Promise.all([
         Notification.find(q)
-          .sort({ startAt: -1, updatedAt: -1, _id: -1 })
+          .sort({ lastSentAt: -1, createdAt: -1, _id: -1 }) // Ordenar por fecha de envío
           .skip(skip)
           .limit(limit)
           .lean(),
