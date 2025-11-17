@@ -47,6 +47,7 @@ const HRealDePlata = () => {
                 <p className="detail-paragraph">{parrafo1}</p>
                 
             </div>
+            {/*
             <div className="detail-section">
                 <h2 className="detail-section-title">{tituloLista1}</h2>
                 <ul className="detail-list">
@@ -68,7 +69,7 @@ const HRealDePlata = () => {
                     <li className="detail-list-item">-{elemento4Lista2}</li>
                     
                 </ul>
-            </div>
+            </div>*/}
 
         <ImageCarousel images={galleryImages} title="Galería de imágenes" />
 

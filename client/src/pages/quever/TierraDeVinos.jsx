@@ -16,30 +16,42 @@ const TierraDeVinos = () => {
     { id: 1, 
       title: 'Vinicola el sarmiento', 
       image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762813225/VinicolaSarmiento_pywyls.png', 
-      path: '/quever/tierradevinos/vinicolaelsarmiento' 
+      externalUrl: "https://directoriocomercial.net/vinicola-sarmiento",
+      openInNewTab: true,
     },
     { id: 2, 
       title: 'Vinicola el aguaje', 
       image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762820680/VinicolaElAguaje_d68vmv.png', 
-      path: '/quever/tierradevinos/vinicolaelaguaje' 
+      externalUrl: "https://directoriocomercial.net/vinicola-el-aguaje",
+      openInNewTab: true, 
     },
     { id: 3, 
       title: 'Viñedo las cruces', 
       image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762820854/VinicolaLasTresCruces_kwaxgg.png', 
-      path: '/quever/tierradevinos/vinedolascruces' },
+      externalUrl: "https://directoriocomercial.net/vinicola-las-cruces",
+      openInNewTab: true,
+     },
     { id: 4, 
       title: 'Hacienda de letras', 
       image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762820931/VinicolaHaciendaDeLetras_iwn0ii.png', 
-      path: '/quever/tierradevinos/haciendadeletras' },
+      externalUrl: "https://directoriocomercial.net/hacienda-de-letras",
+      openInNewTab: true, 
+    },
+    { id: 5, 
+      title: 'Segunda parte', 
+      image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1763341186/SegundaParte_1_iu0trr.png', 
+      externalUrl: "https://directoriocomercial.net/vinicola-segunda-parte",
+      openInNewTab: true, 
+    },
 
     //Paatrocinadores que no pagaron
-    { id: 5, 
+    { id: 6, 
       title: 'Bodegas origen', 
       image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1762810725/BodegasOrigen_purwum.png', 
       path: '/quever/tierradevinos/bodegasorigen' },
-    { id: 6, title: 'Rancho ubuntu', image: '/assents/imagenes/TierraDeVino/RanchoUbuntu.png', path: '/quever/tierradevinos/ranchoubuntu' },
-    { id: 7, title: 'Real de plata', image: '/assents/imagenes/TierraDeVino/RealDePlata.png', path: '/quever/tierradevinos/realdeplata' },
-    { id: 8, title: 'Segunda parte', image: '/assents/imagenes/TierraDeVino/SegundaParte.png', path: '/quever/tierradevinos/segundaparte' },
+    { id: 7, title: 'Rancho ubuntu', image: '/assents/imagenes/TierraDeVino/RanchoUbuntu.png', path: '/quever/tierradevinos/ranchoubuntu' },
+    { id: 8, title: 'Real de plata', image: '/assents/imagenes/TierraDeVino/RealDePlata.png', path: '/quever/tierradevinos/realdeplata' },
+    
     
     
     { id: 9, title: 'Vinicola Santa Elena', image: '/assents/imagenes/TierraDeVino/VinicolaSantaElena.png', path: '/quever/tierradevinos/vinicolasantaelena' },
@@ -66,7 +78,9 @@ const TierraDeVinos = () => {
               key={item.id}
               image={item.image}
               title={item.title}
-              onClick={() => handleNavigation(item.path)}
+              onClick={item.path ? () => handleNavigation(item.path) : undefined}
+              externalUrl={item.externalUrl}
+              openInNewTab={item.openInNewTab}
             />
           ))}
         </div>

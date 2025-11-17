@@ -51,8 +51,9 @@ const VinicolaSantaElena = () => {
                 <h1 className="detail-main-title">Vinícola Santa Elena - Pabellón de Arteaga</h1>
                 <p className="detail-paragraph">{parrafo1}</p>
                 <p className="detail-paragraph">{parrafo2}</p>
-                <p className="detail-paragraph">{parrafo3}</p>
+                {/*<p className="detail-paragraph">{parrafo3}</p>*/}
             </div>
+            {/* 
             <div className="detail-section">
                 <h2 className="detail-section-title">{tituloLista1}</h2>
                 <ul className="detail-list">
@@ -73,6 +74,7 @@ const VinicolaSantaElena = () => {
                     <li className="detail-list-item">-{elemento5Lista2}</li>
                 </ul>
             </div>
+            */}
 
         <ImageCarousel images={galleryImages} title="Galería de imágenes" />
 

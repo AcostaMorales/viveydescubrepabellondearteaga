@@ -34,6 +34,7 @@ const BodegasOrigen = () => {
                 <p className="detail-paragraph">En #BodegasOrigen recorres viñedos, barricas y aromas; conectas con la historia y el origen del vino en Aguascalientes, descubriendo la riqueza agrícola, cultural y sensorial de esta región vitivinícola.</p>
                 <p className="detail-paragraph">Durante el recorrido, podrás caminar entre viñedos, conocer los procesos de fermentación y crianza en la sala de barricas, y dejarte envolver por la atmósfera única de este lugar. La experiencia culmina con una cata guiada, donde degustarás vinos locales que expresan los auténticos sabores de la tierra.</p>
             </div>
+            {/* 
             <div className="detail-section">
                 <h2 className="detail-section-title">Elementos destacados</h2>
                 <ul className="detail-list">
@@ -59,6 +60,7 @@ const BodegasOrigen = () => {
 
                 </ul>
             </div>
+            */}
 
         <ImageCarousel images={galleryImages} title="Galería de imágenes" />
 
