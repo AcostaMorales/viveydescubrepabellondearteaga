@@ -18,7 +18,7 @@ const Home = () => {
       id: 2,
       title: "Directorio Comercial ",
       image: "https://res.cloudinary.com/dbebikryr/image/upload/v1762278535/DirectorioComercial_meis2a.png",
-      externalUrl: "https://directorio-comercial-swart.vercel.app/region/aguascalientes/pabellondearteaga",
+      externalUrl: "https://directorio-comercial.com",
       openInNewTab: true,
     },
     {
