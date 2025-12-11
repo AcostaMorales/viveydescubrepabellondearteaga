@@ -14,6 +14,7 @@ import CentroHistorico from './pages/quever/CentroHistorico.jsx';
 import TierraDeVinos from './pages/quever/TierraDeVinos.jsx';
 import RutaReligiosa from './pages/quever/RutaReligiosa.jsx';
 import FeriasYFestividades from './pages/quever/FeriasYFestividades.jsx';
+import RutaDeLaGarnacha from './pages/quever/RutaDeLaGarnacha.jsx';
 
 // Páginas del Centro Histórico
 import AntiguaEstacion from './pages/centrohistorico/AntiguaEstacion.jsx';
@@ -88,6 +89,7 @@ function App() {
             <Route path="/quever/tierradevinos" element={<TierraDeVinos />} />
             <Route path="/quever/rutareligiosa" element={<RutaReligiosa />} />
             <Route path="/quever/feriasyfestividades" element={<FeriasYFestividades />} />
+            <Route path="/quever/rutadelagarnacha" element={<RutaDeLaGarnacha />} />
 
             {/* Centro Histórico */}
             <Route path="/quever/centrohistorico/antiguaestacion" element={<AntiguaEstacion />} />
