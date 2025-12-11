@@ -30,7 +30,8 @@ const QueVer = () => {
       id: 4,
       title: 'Haciendas',
       image: '/assents/imagenes/PaginaQueVer/Haciendas.png',
-      path: '/quever/haciendas',
+      path: '/pdfs/haciendas-informativo.pdf',
+      type: 'pdf',
     },
     {
       id: 5,
@@ -46,8 +47,14 @@ const QueVer = () => {
     },
   ];
 
-  const handleNavigation = (path) => {
-    navigate(path);
+  const handleNavigation = (item) => {
+    if (item.type === 'pdf') {
+      // Abrir PDF en nueva ventana
+      window.open(item.path, '_blank');
+    } else {
+      // Navegación normal
+      navigate(item.path);
+    }
   };
 
   return (
@@ -72,7 +79,7 @@ const QueVer = () => {
               key={item.id}
               image={item.image}
               title={item.title}
-              onClick={() => handleNavigation(item.path)}
+              onClick={() => handleNavigation(item)}
             />
           ))}
         </div>
