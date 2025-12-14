@@ -30,8 +30,7 @@ const QueVer = () => {
       id: 4,
       title: 'Haciendas',
       image: '/assents/imagenes/PaginaQueVer/Haciendas.png',
-      path: '/pdfs/haciendas-informativo.pdf',
-      type: 'pdf',
+      path: '/quever/haciendas',
     },
     {
       id: 5,

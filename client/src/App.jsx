@@ -15,6 +15,7 @@ import TierraDeVinos from './pages/quever/TierraDeVinos.jsx';
 import RutaReligiosa from './pages/quever/RutaReligiosa.jsx';
 import FeriasYFestividades from './pages/quever/FeriasYFestividades.jsx';
 import RutaDeLaGarnacha from './pages/quever/RutaDeLaGarnacha.jsx';
+import Haciendas from './pages/quever/Haciendas.jsx';
 
 // Páginas del Centro Histórico
 import AntiguaEstacion from './pages/centrohistorico/AntiguaEstacion.jsx';
@@ -37,6 +38,11 @@ import VinaLasCruces from './pages/tierradevino/VinaLasCruces.jsx';
 import VinicolaElAguaje from './pages/tierradevino/VinicolaElAguaje.jsx';
 import VinicolaElSarmiento from './pages/tierradevino/VinicolaElSarmiento.jsx';
 import VinicolaSantaElena from './pages/tierradevino/VinicolaSantaElena.jsx';
+
+// Páginas de Haciendas
+import HaciendaSantiago from './pages/Haciendas/Santiago.jsx';
+import HaciendaElMezquite from './pages/Haciendas/ElMezquite.jsx';
+import HaciendaGarabato from './pages/Haciendas/Garabato.jsx';
 
 // Páginas de Ruta Religiosa
 import InmaculadaConcepcion from './pages/rutareligiosa/InmaculadaConcepcion.jsx';
@@ -90,6 +96,8 @@ function App() {
             <Route path="/quever/rutareligiosa" element={<RutaReligiosa />} />
             <Route path="/quever/feriasyfestividades" element={<FeriasYFestividades />} />
             <Route path="/quever/rutadelagarnacha" element={<RutaDeLaGarnacha />} />
+            <Route path="/quever/haciendas" element={<Haciendas />} />
+
 
             {/* Centro Histórico */}
             <Route path="/quever/centrohistorico/antiguaestacion" element={<AntiguaEstacion />} />
@@ -112,6 +120,11 @@ function App() {
             <Route path="/quever/tierradevinos/vinicolaelaguaje" element={<VinicolaElAguaje />} />
             <Route path="/quever/tierradevinos/vinicolaelsarmiento" element={<VinicolaElSarmiento />} />
             <Route path="/quever/tierradevinos/vinicolasantaelena" element={<VinicolaSantaElena />} />
+
+            {/* Haciendas */}
+            <Route path="/quever/haciendas/haciendadesantiago" element={<HaciendaSantiago />} />
+            <Route path="/quever/haciendas/haciendadeelmezquite" element={<HaciendaElMezquite />} />
+            <Route path="/quever/haciendas/haciendadegarabato" element={<HaciendaGarabato />} />
 
             {/* Ruta Religiosa */}
             <Route path="/quever/rutareligiosa/capilladelainmaculadaconcepcion" element={<InmaculadaConcepcion />} />

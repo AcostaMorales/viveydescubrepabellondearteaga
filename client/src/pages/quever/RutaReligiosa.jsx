@@ -6,7 +6,7 @@ import '../../styles/NavigationPage.css';
 
 const RutaReligiosa = () => {
   const navigate = useNavigate();
-  const rutaImagenesBase = 'https://raw.githubusercontent.com/AcostaMorales/AlmacenDeImagenes/main/';
+  
 
   const navigationItems = [
     { id: 1, title: 'Capilla de la Inmaculada Concepción', image: '/assents/imagenes/RutaReligiosa/CapillaDeLaInmaculada.png', path: '/quever/rutareligiosa/capilladelainmaculadaconcepcion' },
