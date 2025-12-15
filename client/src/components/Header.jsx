@@ -49,13 +49,18 @@ const Header = ({ headerImage, headerAlt, showHeaderImage = false }) => {
           )}
 
           <div className="logo-container">
-            <Link to="/" onClick={closeMenu}>
+            <a 
+              href="https://www.facebook.com/share/1B28S8HaGE/?mibextid=wwXIfr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+            >
               <img
                 src="/assents/imagenes/Logos/LogoPabellon.svg"
                 alt="Pabellón de Arteaga"
                 className="logo"
               />
-            </Link>
+            </a>
           </div>
         </div>
 
