@@ -15,7 +15,7 @@ const TierraDeVinos = () => {
     //Patrocinadores que pagaron
     { id: 1, 
       title: 'Mapa de tierra de vinos', 
-      image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1763143254/boton_mapa_vinicolas_du1zt6.png', 
+      image: 'https://res.cloudinary.com/dbebikryr/image/upload/v1765823377/PESTA%C3%91A_mapa_vinicolas2_iih9fn.png', 
       externalUrl: "https://view.genially.com/69169ef6f29001777d69cd40/interactive-content-mapa-vinicolas",
       openInNewTab: true,
     },
