@@ -1,0 +1,252 @@
+/* Estilos para la página de Noticias y Eventos */
+
+.noticias-eventos-page {
+  min-height: 100vh;
+  
+}
+
+.noticias-eventos-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Sección del título */
+.title-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 1rem;
+}
+
+.page-title {
+  font-size: 3rem;
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #5a6c7d;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Sección del carrusel */
+.carousel-section {
+  margin-bottom: 3rem;
+}
+
+.tagged-image-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.tagged-image-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  background: white;
+  cursor: pointer;
+}
+
+.tagged-image-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.tagged-image-item:active {
+  transform: translateY(-5px);
+  transition: all 0.1s ease;
+}
+
+/* Etiquetas */
+.image-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+}
+
+.tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tag.noticias {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.tag.eventos {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+/* Wrapper de imagen */
+.image-wrapper {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.tagged-image-item:hover .carousel-image {
+  transform: scale(1.05);
+}
+
+/* Overlay de información */
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  padding: 2rem 1.5rem 1.5rem;
+  color: white;
+}
+
+.image-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Sección de información */
+.info-section {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.info-card h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  color: #5a6c7d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .noticias-eventos-content {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 2.2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .tagged-image-carousel {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .image-wrapper {
+    height: 280px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title-section {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .tagged-image-carousel {
+    gap: 1rem;
+  }
+
+  .image-wrapper {
+    height: 240px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tag {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .image-overlay {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .image-title {
+    font-size: 1rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tagged-image-item {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.tagged-image-item:nth-child(1) { animation-delay: 0.1s; }
+.tagged-image-item:nth-child(2) { animation-delay: 0.2s; }
+.tagged-image-item:nth-child(3) { animation-delay: 0.3s; }
+.tagged-image-item:nth-child(4) { animation-delay: 0.4s; }
