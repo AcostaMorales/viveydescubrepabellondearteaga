@@ -19,7 +19,8 @@ const FeriasYFestividades = () => {
       id: 1,
       title: 'Feria Pabellón',
       image: rutaImagenesBase + 'ImagenesRepertorio/Paginas/FeriasYFestividades/FeriaPabellonNueva.png',
-      path: '',
+      externalUrl: "https://feriapabellondearteaga.vercel.app",
+      openInNewTab: true,
     },
     {
       id: 2,
@@ -29,7 +30,15 @@ const FeriasYFestividades = () => {
     },
   ];
 
-  const handleNavigation = (path) => navigate(path);
+  const handleNavigation = (item) => {
+    if (item.externalUrl && item.openInNewTab) {
+      // Abrir URL externa en nueva pestaña
+      window.open(item.externalUrl, '_blank', 'noopener,noreferrer');
+    } else if (item.path) {
+      // Navegar a ruta interna
+      navigate(item.path);
+    }
+  };
 
   return (
     <div className="navigation-page blue">
@@ -49,7 +58,7 @@ const FeriasYFestividades = () => {
               key={item.id}
               image={item.image}
               title={item.title}
-              onClick={() => handleNavigation(item.path)}
+              onClick={() => handleNavigation(item)}
             />
           ))}
         </div>
