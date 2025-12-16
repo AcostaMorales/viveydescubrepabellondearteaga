@@ -115,7 +115,7 @@ const Footer = () => {
 
         <button
           className="footer-button"
-          onClick={() => window.open('https://directorio.vivemexico.online', '_blank')}
+          onClick={() => window.open('https://directorio-comercial.com', '_blank')}
         >
           <img
             src="/assents/imagenes/Iconos/directoriocomercial.png"
