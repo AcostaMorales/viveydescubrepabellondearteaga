@@ -10,6 +10,18 @@ const NoticiasEventos = () => {
   // Array de imágenes con sus respectivas etiquetas y rutas
   const imagenesNoticias = [
     {
+      src: 'https://res.cloudinary.com/dbebikryr/image/upload/v1765915742/9a03ffda-d504-450f-95a9-410e9d405cc7.png',
+      alt: '🎉🎄 ¡Tenemos ganadores!',
+      categoria: 'noticias',
+      path: 'https://www.facebook.com/share/p/1L1t66XLvf/'
+    },
+     {
+      src: 'https://res.cloudinary.com/dbebikryr/image/upload/v1765915612/d1cfacef-dfb9-4bb3-93fd-10518b970260.png',
+      alt: '🥊🔥 Orgullo que trasciende desde el CDC.',
+      categoria: 'noticias',
+      path: 'https://www.facebook.com/share/p/1CvA7bPMJz/'
+    },
+    {
       src: 'https://res.cloudinary.com/dbebikryr/image/upload/v1765846881/daacfe20-b9da-4d26-83a4-f04da469813d.png',
       alt: '⚾🎉 ¡Gran Clausura e Inauguración en el Béisbol Municipal! 🎉⚾',
       categoria: 'noticias',
