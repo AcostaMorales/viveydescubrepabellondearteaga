@@ -93,6 +93,10 @@
   background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
 }
 
+.tag.promociones {
+  background: linear-gradient(135deg, #ff4757 0%, #ff3742 100%);
+}
+
 /* Wrapper de imagen */
 .image-wrapper {
   position: relative;

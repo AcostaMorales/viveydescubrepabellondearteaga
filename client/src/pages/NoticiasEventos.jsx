@@ -10,6 +10,18 @@ const NoticiasEventos = () => {
   // Array de imágenes con sus respectivas etiquetas y rutas
   const imagenesNoticias = [
     {
+      src: 'https://res.cloudinary.com/dbebikryr/image/upload/v1765927311/WhatsApp_Image_2025-11-13_at_17.20.20_3_vyvhjq.jpg',
+      alt: '',
+      categoria: 'Promociones',
+      path: 'https://puntomedico.directorio-comercial.com'
+    },
+    {
+      src: 'https://res.cloudinary.com/dbebikryr/image/upload/v1765927317/WhatsApp_Image_2025-11-13_at_17.20.20_6_znsegq.jpg',
+      alt: '',
+      categoria: 'Promociones',
+      path: 'https://puntomedico.directorio-comercial.com'
+    },
+    {
       src: 'https://res.cloudinary.com/dbebikryr/image/upload/v1765915742/9a03ffda-d504-450f-95a9-410e9d405cc7.png',
       alt: '🎉🎄 ¡Tenemos ganadores!',
       categoria: 'noticias',
@@ -88,7 +100,9 @@ const NoticiasEventos = () => {
               >
                 <div className="image-tag">
                   <span className={`tag ${imagen.categoria}`}>
-                    {imagen.categoria === 'noticias' ? 'NOTICIAS' : 'EVENTOS'}
+                    {imagen.categoria === 'noticias' ? 'NOTICIAS' : 
+                     imagen.categoria === 'eventos' ? 'EVENTOS' : 
+                     imagen.categoria === 'promociones' ? 'PROMOCIONES' : ''}
                   </span>
                 </div>
                 <div className="image-wrapper">
