@@ -19,7 +19,7 @@ const FeriasYFestividades = () => {
       id: 1,
       title: 'Feria Pabellón',
       image: rutaImagenesBase + 'ImagenesRepertorio/Paginas/FeriasYFestividades/FeriaPabellonNueva.png',
-      externalUrl: "https://feriapabellondearteaga.vercel.app",
+      externalUrl: "https://feriapabellondearteaga.vercel.app/home",
       openInNewTab: true,
     },
     {
